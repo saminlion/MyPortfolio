@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Road of Pilgrim",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/Ss_lU3XqzJs",
+        "imageUrl": "Image/Road of Pilgrim_BG.jpg",
+        "developmentPeriod": "2015.06.01 ~ 2016.06.30",
+        "teamSize": "프로그래머 1명",
+        "tools": [
+            "Cocos2d-x"
+        ],
+        "description": "2D 액션 런 게임",
+        "role": "본 프로젝트에서 주된 역할 설명",
+        "details": [
+            "타일맵의 사용으로 맵과 적 그리고 플레이어의 생성 위치 지정",
+            "Vector 와 스프라이트 생성 기능을 이용해 지정된 적의 생성 위치에 따라 적을 동적으로 생성",
+            "Sound Texture와 메크로와 선행처리기로 각 플랫폼에 대응하여 사운드 재생",
+            "Box2D 의 Static, Dynamic 바디의 실시간 변경과 충동처리로 적의 타격 판정 및 날아가는 효과 적용",
+            "Box2D 와 Vector 의 생성 및 제거로 게임 메모리의 최적화",
+            "마스크를 이용해 적의 공격이 적에게 맞지 않게 하면서 또한 캐릭터의 공격으로 적의 공격을 제거할 수 있도록 설정",
+            "스케쥴을 사용해서 파티클 및 바디에 설정을 실시간으로 게임 내에서 생성과 제거"
+        ]
+    },
+    {
+        "name": "VRZONE 런쳐",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/platform.PNG",
+        "developmentPeriod": "",
+        "teamSize": "프로그래머 1명",
+        "tools": [
+            "C# winform"
+        ],
+        "description": "플랫폼과 개별 PC간의 통신 연동으로 게임을 실행 시키거나 종료하는 등의 작업을 위한 런처",
+        "role": "본 프로젝트에서 주된 역할 설명",
+        "details": [
+            "플랫폼과의 UDP 통신",
+            "각 PC의 상태 (VR 헤드셋, 컨트롤러 배터리 등의 정보 전달)",
+            "게임 실행 및 종료 등의 루틴",
+            "게임 종료 후 광고 영상이 있으면 광고 실행 등의 기능"
+        ]
+    },
+    {
+        "name": "근전도",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/ems.jpg",
+        "developmentPeriod": "2022.05.21 ~ 2022.07.31",
+        "teamSize": "프로그래머 1명",
+        "tools": [
+            "C# winform"
+        ],
+        "description": "근전도 기기를 사용하여 운동 시에 도움이 될 수 있도록 하는 센서 연동 프로젝트",
+        "role": "본 프로젝트에서 주된 역할 설명",
+        "details": [
+            "근전도 기기와 PC 간의 블루투스 통신",
+            "근전도 EMS 공식을 사용하여 PC에서 그래프로 표현"
+        ]
+    },
+    {
+        "name": "VR 델타 플랫폼",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/deltakiosk.png",
+        "developmentPeriod": "",
+        "teamSize": "프로그래머 1명",
+        "tools": [
+            "C# winform"
+        ],
+        "description": "델타 키오스크와 PC 간의 런처와 플랫폼의 연동 및 UI 구현",
+        "role": "본 프로젝트에서 주된 역할 설명",
+        "details": [
+            "델타 키오스크와 PC간의 TCP 통신",
+            "PC 런처에서 광고 실행 기능",
+            "게임 실행 및 종료 등의 루틴"
+        ]
+    }
+]
