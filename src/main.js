@@ -22,7 +22,10 @@ const app = createApp(App)
 
 app.use(Primevue, {
 theme: {
-    preset:Aura
+    preset:Aura,
+    options: {
+        darkModeSelector: '.my-app-dark',
+    }
 }
 })
 

@@ -155,7 +155,6 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 2.0;
-  color: #E4E4E7;
   word-wrap: break-word;
   text-align: justify;
   margin: 0;
