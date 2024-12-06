@@ -1,13 +1,13 @@
 <template>
- <div class="project">
-    <h2>Projects</h2>
+  <div class="project">
+    <h2>{{ $t('project.title') }}</h2>
 
     <Accordion value="3">
       <AccordionPanel value="0">
         <AccordionHeader>Unity + {{ unityProj.length }}</AccordionHeader>
         <AccordionContent>
           <project-list :projects="unityProj"></project-list>
-        </AccordionContent>         
+        </AccordionContent>
       </AccordionPanel>
 
       <AccordionPanel value="1">
@@ -28,27 +28,75 @@
 </template>
 
 <script>
-
-
 import ProjectList from '../components/Project/ProjectList.vue'
-import unityData from '@/data/unity.json';
-import unrealData from '@/data/unreal.json';
-import etcData from '@/data/etc.json';
+import unityDataKo from '@/data/ko/unity.json';
+import unrealDataKo from '@/data/ko/unreal.json';
+import etcDataKo from '@/data/ko/etc.json';
+import unityDataJp from '@/data/jp/unity.json';
+import unrealDataJp from '@/data/jp/unreal.json';
+import etcDataJp from '@/data/jp/etc.json';
+import unityDataEn from '@/data/en/unity.json';
+import unrealDataEn from '@/data/en/unreal.json';
+import etcDataEn from '@/data/en/etc.json';
+import { useGlobalStore } from '@/store/globalStore';
+import { ref, watch  } from 'vue';
 
 export default {
-  components: {
-    ProjectList
-  },
-  data() {
+  setup() {
+    const globalStore = useGlobalStore();
+
+    // 데이터 초기화
+    const languageData = {
+      ko: {
+        unity: unityDataKo,
+        unreal: unrealDataKo,
+        etc: etcDataKo,
+      },
+      jp: {
+        unity: unityDataJp,
+        unreal: unrealDataJp,
+        etc: etcDataJp,
+      },
+      en: {
+        unity: unityDataEn,
+        unreal: unrealDataEn,
+        etc: etcDataEn,
+      },
+    };
+
+    const unityProj = ref(languageData.ko.unity);
+    const unrealProj = ref(languageData.ko.unreal);
+    const etcProj = ref(languageData.ko.etc);
+
+    const targetLan = ref(globalStore.language);
+
+    // 언어 변경 시 데이터 업데이트
+    const updateProjects = () => {
+      if (languageData[targetLan.value]) {
+        unityProj.value = languageData[targetLan.value].unity;
+        unrealProj.value = languageData[targetLan.value].unreal;
+        etcProj.value = languageData[targetLan.value].etc;
+      } else {
+        console.error("Invalid language selected:", targetLan.value);
+      }
+    };
+
+    // 언어 변경 감시
+    watch(targetLan, updateProjects);
+
+    // 초기 업데이트
+    updateProjects();
+
     return {
-      unityProj: unityData,
-      unrealProj: unrealData,
-      etcProj: etcData
+      unityProj,
+      unrealProj,
+      etcProj,
+      targetLan,
     };
   },
-  mounted() {
-    console.log("ProjectPage mounted - projects:", this.unityProj); // 디버깅용 출력
-  }
+  components: {
+    ProjectList,
+  },
 };
 </script>
 

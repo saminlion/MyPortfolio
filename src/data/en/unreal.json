@@ -1,0 +1,157 @@
+[
+    {
+        "name": "The Truth",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/JOdlr2gMfSQ",
+        "imageUrl": "Image/TheTruth_BG.jpg",
+        "developmentPeriod": "2015.04.01 ~ 2016.04.23",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Unreal Engine 4"
+        ],
+        "description": "A 3D RPG game where players progress by defeating enemies.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented character movements and attacks",
+            "Developed AI patterns for enemies and bosses",
+            "Created cinematic videos using Matinee"
+        ]
+    },
+    {
+        "name": "Super Pong VR",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/_1b4J0Qq10I",
+        "imageUrl": "Image/super Pong.jpg",
+        "developmentPeriod": "2016.12.20 ~ 2017.03.16",
+        "teamSize": "1 Programmer, 1 Artist, 1 Planner",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC VIVE"
+        ],
+        "description": "A 3D VR sports game where players compete with other players or AI to score goals in a map filled with obstacles using rackets.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented HTC Vive gameplay",
+            "Developed feedback based on the speed of racket swings using Vive controllers and adjusted ball speed accordingly",
+            "Created AI movements to follow the ball",
+            "Implemented AI ball returns with rackets",
+            "Increased difficulty when AI goes out of bounds or is losing",
+            "Implemented time-attack mode with a set time limit",
+            "Developed scoring system to determine winners",
+            "Implemented set-based gameplay to determine overall victory",
+            "Added diverse obstacles that affect ball speed, direction, or trajectory",
+            "Synchronized ball speed",
+            "Synchronized racket movements between players",
+            "Added waiting effects until players connect",
+            "Developed travel system for server and client to move to the next map"
+        ]
+    },
+    {
+        "name": "Samdo Naval Headquarters Content",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/-4f3X3rpkzs",
+        "imageUrl": "Image/ty.jpg",
+        "developmentPeriod": "2019.05.21 ~ 2020.12.31",
+        "teamSize": "1 Planner, 1 External Vendor Manager",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC VIVE"
+        ],
+        "description": "A VR game with six different mini-games set in the Samdo Naval Headquarters.",
+        "role": "Primary role in this project",
+        "details": [
+            "Managed and provided feedback on content developed by external vendors",
+            "Adjusted and modified specific content",
+            "Provided support for final installation and operations"
+        ]
+    },
+    {
+        "name": "XR Showroom",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/-zZYe1mGO04",
+        "imageUrl": "Image/XR.PNG",
+        "developmentPeriod": "2021.08.01 ~ 2023.12.31",
+        "teamSize": "4 Programmers, 4 Artists, 3 Planners",
+        "tools": [
+            "Unreal Engine 4",
+            "Unreal Engine 5",
+            "Photon",
+            "Android",
+            "Mac"
+        ],
+        "description": "A social XR showroom project for cultural product distribution, where users create their own stores, upload them, and allow consumers to try on clothes using avatars and purchase items.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented a system allowing avatars to enter uploaded stores",
+            "Developed a system for trying on and purchasing clothes",
+            "Synchronized movements of other users within the store",
+            "Implemented chat functionality between users or with sellers in the store",
+            "Created a system for placing clothes in the store",
+            "Optimized and updated the existing system for placing items and clothes in stores",
+            "Updated UI systems to align with new designs and made changes easier by data-driven implementation",
+            "Ensured functionality on Android phones, tablets, and iPads",
+            "Optimized UI for various devices"
+        ]
+    },
+    {
+        "name": "Mobile Vehicle Jamboree Camping Experience",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/660pRusb-no",
+        "imageUrl": "Image/camping.jpg",
+        "developmentPeriod": "2022.05.13 ~ 2022.08.31",
+        "teamSize": "2 Programmers, 3 Artists, 2 Planners",
+        "tools": [
+            "Unreal Engine 4"
+        ],
+        "description": "A content experience for all ages using a mobile large vehicle, a projector, and laser sensors to find objects or items like campfire wood through touch interactions.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed a touch system to interact with objects using touch sensors",
+            "Implemented the overall game system",
+            "Supported ride content programs and implemented systems like Planar VR",
+            "Developed a system to toggle projects and content on and off using tablets"
+        ]
+    },
+    {
+        "name": "Portable Shooting Game DMZ Underground",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/Under.jpg",
+        "developmentPeriod": "2022.05.19 ~ 2023.09.05",
+        "teamSize": "2 Programmers, 2 Planners, 5 Artists",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC Vive"
+        ],
+        "description": "A multiplayer content experience using backpack PCs and VR, allowing players to walk in the real world while shooting enemies.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed a system to move characters in sync with users' footsteps using mobile backpacks",
+            "Implemented animal and human enemy AI",
+            "Created systems for shooting and reloading guns",
+            "Implemented event systems occurring within the map",
+            "Designed a data table for enemies and events to simplify balancing tests for planners",
+            "Developed a system to record and synchronize each player's scores"
+        ]
+    },
+    {
+        "name": "Land, Sea, and Air Force Simulation",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/airforce.jpg",
+        "developmentPeriod": "2022.05.19 ~ 2023.09.05",
+        "teamSize": "2 Programmers, 2 Planners, 5 Artists",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC Vive",
+            "Simtools"
+        ],
+        "description": "A VR content experience allowing users to virtually operate an army tank, a navy submarine, and an air force fighter jet.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed plugins to integrate external 6-axis simulators with Unreal Engine and enable simulator operation",
+            "Improved existing systems for the air force and implemented enemy fighter jet appearances and targeting systems",
+            "Modified flight paths to enhance the realism of the flying experience"
+        ]
+    }
+]

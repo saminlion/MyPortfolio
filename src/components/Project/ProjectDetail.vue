@@ -9,7 +9,7 @@
         </template>
 
          
-        <p v-if="project.downloadLink"><strong>다운로드: </strong>
+        <p v-if="project.downloadLink"><strong>{{ $t('project.download') }}: </strong>
           <a :href="project.downloadLink" target="_blank">{{ project.downloadLink }}</a>
         </p>
 
@@ -17,17 +17,17 @@
         <img :src="project.imageUrl" alt="Project image" class="project-image">
 
         <!-- 데모 영상 링크 -->
-        <p v-if="project.demoVideo"><strong>데모 동영상:</strong>
+        <p v-if="project.demoVideo"><strong>{{ $t('project.demoVideo') }}:</strong>
           <!-- <a :href="project.demoVideo" target="_blank">데모 영상 보기</a> -->
           <youtube-video-player :youtubeUrl="project.demoVideo">데모 영상 보기</youtube-video-player>
         </p>
 
         <!-- 개발 기간, 참여 인원, 개발 환경 등 -->
-        <p><strong>개발 기간:</strong> {{ project.developmentPeriod }}</p>
-        <p><strong>참여 인원:</strong> {{ project.teamSize }}</p>
-        <p><strong>개발 환경:</strong> {{ project.tools.join(', ') }}</p>
-        <p><strong>게임 소개:</strong> {{ project.description }}</p>
-        <p><strong>주된 역할:</strong> {{ project.role }}</p>
+        <p><strong>{{ $t('project.devTime') }}:</strong> {{ project.developmentPeriod }}</p>
+        <p><strong>{{ $t('project.devPeole') }}:</strong> {{ project.teamSize }}</p>
+        <p><strong>{{ $t('project.devEnv') }}:</strong> {{ project.tools.join(', ') }}</p>
+        <p><strong>{{ $t('project.desc') }}:</strong> {{ project.description }}</p>
+        <p><strong>{{ $t('project.mainPart') }}:</strong> {{ project.role }}</p>
 
         <!-- 프로젝트 세부 설명 리스트 -->
         <ul>
@@ -63,7 +63,7 @@ export default {
     close(){
       console.log("close dialog");
       this.$emit('update:visible', false);
-    }
+    },
   }
 };
 </script>

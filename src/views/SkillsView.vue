@@ -1,10 +1,10 @@
 <template>
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>{{ $t('skill.title') }}</h2>
 
     <Accordion value="0">
       <AccordionPanel value="0">
-        <AccordionHeader> 프로그래밍 관련 </AccordionHeader>
+        <AccordionHeader> {{ $t('skill.program') }} </AccordionHeader>
         <AccordionContent>
           <ul>
             <li v-for="programing in programings" :key="programing">
@@ -16,7 +16,7 @@
       </AccordionPanel>
 
       <AccordionPanel value="1">
-        <AccordionHeader> 협업 관련 </AccordionHeader>
+        <AccordionHeader> {{ $t('skill.coop') }} </AccordionHeader>
         <AccordionContent>
           <ul>
             <li v-for="coop in coops" :key="coop">
@@ -28,7 +28,7 @@
       </AccordionPanel>
 
       <AccordionPanel value="2">
-        <AccordionHeader> 기타 관련 </AccordionHeader>
+        <AccordionHeader> {{ $t('skill.etc') }} </AccordionHeader>
         <AccordionContent>
           <ul>
             <li v-for="language in languages" :key="language">
@@ -62,8 +62,8 @@ export default {
       [{ label: "Github", color: '#333333', value: 84 }],
       [{ label: "Naver Works", color: '#1EC800', value: 80 }]],
 
-      languages: [[{ label: "일본어", color: '#FF4B4B', value: 80 }],
-      [{ label: "영어", color: '#1E90FF', value: 85 }]],
+      languages: [[{ label: "日本語", color: '#FF4B4B', value: 80 }],
+      [{ label: "English", color: '#1E90FF', value: 85 }]],
     };
   }
 };

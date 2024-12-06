@@ -1,150 +1,137 @@
 <template>
   <section id="about">
-    <h2>자기 소개서</h2>
+    <h2>{{ $t('about.title') }}</h2>
 
     <Accordion value="0">
       <AccordionPanel value="0">
-        <AccordionHeader> 나의 가치관 </AccordionHeader>
+        <AccordionHeader> {{ $t('about.value1') }} </AccordionHeader>
         <AccordionContent>
           <p>
-            제 삶의 좌우명은 Change To Chance (변해야 기회를 잡는다. 변함과 기회는 한 끗 차이다)"이고 <br> 삶의 지침은 <br> "항상 겸손해라, 항상 배워라, 비전을
-            향한 환골탈태는 두려워하지 마라, 노력은 삶의 원동력이다." 입니다. <br> 제가 가장 중요하다고 생각되는 것은 경험과 도전이라고 생각됩니다.
+            {{ $t('about.vision') }}
           </p>
         </AccordionContent>
       </AccordionPanel>
 
       <AccordionPanel value="1">
-        <AccordionHeader> 경험 </AccordionHeader>
+        <AccordionHeader> {{ $t('about.experience.title') }} </AccordionHeader>
         <AccordionContent>
           <div class="beforeExp">
-            <h3> 개발자를 목표로 할 때의 경험 </h3>
+            <h3> {{ $t('about.experience.before.title') }} </h3>
 
-            <p> 아직 회사를 입사하기전 저는 NC SOFT 인턴연수 기간 아주 많은 경험을 쌓고 도전을 받았습니다. <br>
-              이유는 전문가들의 일하는 모습을 보면 정말로 피가 되고 살이 되고 또한 나도 언젠가 저렇게 돼야겠다는 도전을 얻습니다. <br>
-              또한, 도전과 경험을 통해 많은 사람과 만나고 예기를 나누고 같이 연수하는 동안 인맥을 쌓으면 후에 정말로 도움이 된다고 생각됩니다.<br>
-              이유는 성공적인 사람들은 한 사람의 재능만이 아닌 많은 사람의 의견과 경험과 지혜를 바탕으로 이룰 수 있는 것으로 생각합니다.<br>
-              오히려 기획 전공을 졸업했습니다만 한 가지 자신이 있는 점은 프로그래머로서의 지식도 있고 가장 필요한 기획자들과의 의사소통에서는 있어서는 스스로 자부심을 느낍니다.</p>
+            <p> {{ $t('about.experience.before.content') }} </p>
 
           </div>
 
           <Divider />
 
           <div class="afterExp">
-            <h3> 개발자를 목표로 할 때의 경험 </h3>
+            <h3> {{ $t('about.experience.after.title') }} </h3>
 
-            <p> 저는 비록 프로그래밍 전공을 하지는 않았습니다. 그래서 더 스스로의 부족함을 잘 알고 있습니다.<br>
-              그리고 그렇게 노력해서 다양한 VR 게임들과 컨텐츠들을 제작하였습니다.<br>
-              8년의 개발자로서 일하면서 프로그래밍 파트장까지 올라갔습니다.<br>
-              그러나 저는 아직도 저의 부족함을 항상 되새기고 있으며 계속 배우는 자세로 임하고 있습니다.<br>
-              Unity, Unreal 엔진 뿐 아니라 다른 VR 기기나 시뮬레이터 같은 툴을 다룬 경험이 많습니다.<br>
-              라스베리파이를 활용한 데이터 프로젝트와 플레이 캔버스를 활용한 웹 메타버스 프로젝트까지의 경험들이 있습니다.<br>
-              그리고 부족함을 알고 vue를 공부하면서 웹 포트폴리오를 작성하거나 게임 재화 계산기를 제작한 경험도 있습니다.<br>
-              유학 생활과 스스로 공부한 일본어를 바탕으로 미국과 일본에도 출장을 가서 현지 통역과 함께 현지인들과 협업하는 프로젝트들을 진행하고<br>
-              코엑스나 킨텍스 전시할 때도 외국인에게 대한 설명이나 팜플렛 등의 번역 작업도 한 경험이 있습니다.<br>
-              그만큼 저는 컴퓨터 언어뿐만 아니라 사용하는 언어를 사용해서 일해왔습니다.<br>
-              지금까지 총 30개 이상의 크고 작은 프로젝트를 하였고 VR 매장에서 운영한 적이 있습니다.</p>
+            <p> {{ $t('about.experience.after.content') }} </p>
           </div>
         </AccordionContent>
       </AccordionPanel>
 
       <AccordionPanel value="2">
-        <AccordionHeader> 성격 </AccordionHeader>
+        <AccordionHeader> {{ $t('about.personality.title') }} </AccordionHeader>
         <AccordionContent>
-          <p>제 가장 자랑하고 싶은 성격은 두려움 없는 도전입니다.<br>
-            유학을 가는 것부터 시작해서 다양한 사람들과 처음으로 게임 제작을 하는 것까지 미지의 세계였지만 저는 단 한 번도 주저하지 않고 도전했습니다.<br>
-            또 저는 항상 제가 속해있는 곳이 어디에 있던 무엇이든 간에 항상 자부심을 느낍니다.<br>
-            그래서 그곳이 최고가 될 수 있도록 저는 항상 노력하고 자신을 발전합니다.<br>
-            바꾸고 싶은 점은 저는 한 가지에 몰두하는 점입니다. 하나가 주어지면 그것을 숙달하려고 최대한에 노력하지만, 단점은 두 가지 이상이 되면 남은 한 가지에는 좀 소홀해지는 점입니다.<br>
-            제 성격의 예시로 학교에서 진행되는 게임 잼이 있었는데 48시간 동안 간단한 게임을 만드는 것이었습니다.<br>
-            그 과정에서 저는 의욕이 넘쳐서 30시간이 넘도록 제작에 몰두하였고 그 결과 반 친구들에게 있어서 저는 굉장히 노력가라고 평가를 받았습니다.<br>
-            물론 저도 그 마음에 힘입어 다음 프로젝트도 도전했습니다.<br>
-            IronShadow라는 2D 게임인데 프로그래머로서 처음 도전해본 게임이고 그만큼 여러 가지 우여곡절이 있었습니다만<br>
-            그걸 극복하는 또 다른 재미를 느끼며 완성했습니다. 마지막 프로젝트인 Shroud는 3D로 AI에 관한 프로그래밍을 처음으로 도전해봤습니다.<br>
-            결과는 매우 성공적이었고 많은 사람이 불가능하다고 했지만, 저에게 있어서는 매우 뜻깊은 도전이었습니다.</p>
+          <p>{{ $t('about.personality.content') }}</p>
         </AccordionContent>
       </AccordionPanel>
 
       <AccordionPanel value="3">
-        <AccordionHeader> 경력 기술서 </AccordionHeader>
+        <AccordionHeader> {{ $t('about.career.title') }} </AccordionHeader>
         <AccordionContent>
           <ul style="margin-top:0">
-            <li>
-              <strong>2010년 7월 ~ 2010년 8월</strong><br />
-              NC Soft 인턴<br />
-              - 기획 연수 및 아이온 기획서 암호화
-            </li>
-            <Divider/>
-            <li>
-              <strong>2016년 12월 ~ 2017년 3월</strong><br />
-              Super Pong 기획 및 개발 담당<br />
-              - 2017 VR Expo 지원<br />
-              - 롯데월드 VR Fantasia (Super Pong 상용화)
-            </li>
-            <Divider/>
-            <li>
-              <strong>2017년 5월 ~ 2018년 7월</strong><br />
-              VR 테마파크 관련 게임 개발 담당<br />
-              <ul>
-                <li>에버랜드 T-Express 체험 개발</li>
-                <li>정글 익스프레스 (송도, 일본 등 운영)</li>
-                <li>VR Park Tokyo 호러체어 개발</li>
-                <li>이글루 페스티벌 Snow Bounce 센서 게임 개발</li>
-                <li>5GX VR 스카이다이빙 (5GX 게임 페스티벌)</li>
-                <li>2018 VR Expo 지원</li>
-                <li>뮤직VR 개발</li>
-              </ul>
-            </li>
-            <Divider/>
-            <li>
-              <strong>2019년 5월 ~ 2024년 7월</strong><br />
-              VR/AR 관련 게임 및 콘텐츠 개발 담당<br />
-              <ul>
-                <li>양주 알로하 히어로즈 게임 개발</li>
-                <li>KEIT 자동차 답승 개발</li>
-                <li>VR존 플랫폼 개발 및 유지 보수</li>
-                <li>양주 체육 복지 센터 벽 센서/VR 콘텐츠 개발</li>
-                <li>순창 실감형 AR 콘텐츠 개발</li>
-                <li>정장 피팅 시뮬레이션 개발</li>
-                <li>경기 학생 스포츠 센터 체험 시스템 개발</li>
-                <li>소방 설비 VR 교육 개발</li>
-                <li>VR Chat 활용 메타버스 강연 개발</li>
-                <li>XR 쇼룸 클라이언트 에디터 개발</li>
-                <li>이동식 차량 벽 센서 콘텐츠 개발</li>
-                <li>계룡 VR 콘텐츠 1종 및 시뮬레이터 플러그인</li>
-              </ul>
-            </li>
-            <Divider/>
-            <li>
-              <strong>업무지식 및 교육</strong><br />
-              <ul>
-                <li>
-                  <strong>2016년 3월 ~ 2016년 9월</strong><br />
-                  경일 직업 능력 개발원 - 게임 프로그래밍 교육 이수
-                </li>
-                <Divider/>
-                <li>
-                  <strong>2019년 3월 ~ 현재</strong><br />
-                  Udemy - 온라인 아카데미<br />
-                  <ul>
-                    <li>Unreal Engine 4 Mastery: Create Multiplayer Games with C++</li>
-                    <li>The Ultimate Guide to 2D Mobile Game Development with Unity</li>
-                    <li>Unreal Engine C++ Developer: Learn C++ and Make Video Games</li>
-                    <li>Unreal Multiplayer Master: Online Game Development In C++</li>
-                    <li>언리얼 엔진4 3D 횡스크롤 게임 만들기</li>
-                    <li>Create Your First RPG And FPS Multiplayer Game In Unity</li>
-                    <li>Unity Multiplayer Game Development: Using Photon 2 (2019)</li>
-                    <li>DirectX 11 Programming</li>
-                  </ul>
-                </li>
-              </ul>
+            <li v-for="(item, index) in getItems('about.career.items')" :key="index">
+              <strong>{{ item.date }}</strong><br />
+              {{ item.title }}<br />
+              <span v-if="Array.isArray(item.description)">
+                <ul>
+                  <li v-for="(desc, i) in item.description" :key="i">
+                    {{ desc }}
+                  </li>
+                </ul>
+              </span>
+              <span v-else>{{ item.description }}</span>
+              <Divider />
             </li>
           </ul>
+        </AccordionContent>
+      </AccordionPanel>
+
+      <AccordionPanel value="4">
+        <AccordionHeader>{{ $t('about.education.title') }}</AccordionHeader>
+        <AccordionContent>
+          
+          <li v-for="(item, index) in getItems('about.education.items')" :key="index">
+              <strong>{{ item.date }}</strong><br />
+              {{ item.title }}<br />
+              <span v-if="Array.isArray(item.description)">
+                <ul>
+                  <li v-for="(desc, i) in item.description" :key="i">
+                    {{ desc }}
+                  </li>
+                </ul>
+              </span>
+              <span v-else>{{ item.description }}</span>
+              <Divider />
+            </li>
         </AccordionContent>
       </AccordionPanel>
 
     </Accordion>
   </section>
 </template>
+
+<script>
+import { useGlobalStore } from '@/store/globalStore';
+import { translateText } from '@/utils/translator';
+import { useI18n } from 'vue-i18n';
+
+export default {
+  setup() {
+    const globalStore = useGlobalStore();
+
+    return {
+      targetLan: globalStore.language,
+      translateText: ""
+    }
+  },
+
+  methods: {
+
+    async translateText(inputText) {
+      try {
+        this.translatedText = await translateText(inputText, this.targetLan);
+
+      }
+      catch (error) {
+        console.error("Trans Error:", error);
+      }
+    },
+
+    getItems(key) {
+      const { tm } = useI18n(); // t: 기본 번역, tm: 메시지 병합
+
+      // 'about.career.items' 키에서 데이터를 가져옵니다.
+      const items = tm(key, { returnObjects: true });
+
+      // 데이터가 배열 형태인지 확인
+      if (!Array.isArray(items)) {
+        console.error('Career Items is not an array:', items);
+        return [];
+      }
+
+      //console.log('Career Items:', items); // 디버깅용
+      return items;
+    }
+  
+
+  },
+}
+
+</script>
 
 <style scoped>
 #about {
