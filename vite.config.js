@@ -19,4 +19,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['live2d-sdk'],
   },
+  build: {
+    rollupOptions: {
+      external: ['/Core/live2dcubismcore.js'] // 빌드에서 제외
+    }
+  }
 });
