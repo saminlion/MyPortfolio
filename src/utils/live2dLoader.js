@@ -77,8 +77,14 @@ export class Live2DLoader {
 
         this.renderer.setIsPremultipliedAlpha(true);
 
+        const scale = 4.0; // 모델의 스케일 값 설정 (큰 값 그대로 유지)
+        const canvasWidth = this.canvas.width;
+        const canvasHeight = this.canvas.height;
+        const aspectRatio = canvasWidth / canvasHeight;
+
         const projection = new CubismMatrix44();
-        projection.scale(4.0, 4.0 * this.canvas.height / this.canvas.width);
+        projection.loadIdentity(); // 초기화
+        projection.scale(scale, scale * aspectRatio);
         this.renderer.setMvpMatrix(projection);
 
         // 렌더링 루프 시작
@@ -93,7 +99,11 @@ export class Live2DLoader {
                 gl.bindTexture(gl.TEXTURE_2D, texture);
                 gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true);
                 gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+                // 안티앨리어싱 적용
+                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
                 gl.generateMipmap(gl.TEXTURE_2D);
+
                 gl.bindTexture(gl.TEXTURE_2D, null);
                 resolve(texture);
             };

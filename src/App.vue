@@ -61,6 +61,11 @@ export default {
       console.error('Canvas element not found!');
       return;
     }
+
+    const dpr = window.devicePixelRatio || 1; //디스플레이 배율
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
+
     const modelPath = '/Model/Wanko/Wanko.model3.json';
     const modelDirectory = '/Model/Wanko/';
 
