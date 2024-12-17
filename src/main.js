@@ -6,6 +6,8 @@ import router from './router'
 import Primevue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
 import i18n from './i18n';
+import '/Core/live2dcubismcore.js';
+
 //#region Primevue Component Import
 import Accordion from 'primevue/accordion';
 import AccordionPanel  from 'primevue/accordionpanel';
