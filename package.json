@@ -11,6 +11,7 @@
   "dependencies": {
     "@primevue/themes": "^4.2.2",
     "axios": "^1.7.9",
+    "live2d-render": "^0.0.5",
     "pinia": "^2.3.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.2",
@@ -20,7 +21,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
-    "vite": "^5.4.10",
+    "vite": "^6.0.3",
+    "vite-plugin-legacy": "^2.1.0",
     "vite-plugin-vue-devtools": "^7.5.4"
   }
 }

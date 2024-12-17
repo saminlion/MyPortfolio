@@ -12,6 +12,8 @@
           <li><a href="#" @click.prevent="navigate('about')">{{ $t('about.title') }}</a></li>
           <li><a href="#" @click.prevent="navigate('projects')">{{ $t('project.title') }}</a></li>
           <li><a href="#" @click.prevent="navigate('skills')">{{ $t('skill.title') }}</a></li>
+          <!-- <li><a href="#" @click.prevent="navigate('model')">{{ $t('skill.title') }}</a></li> -->
+
         </ul>
       </nav>
 
