@@ -1,0 +1,132 @@
+<template>
+  <header class="main-header">
+    <div class="header-container">
+      <!-- 축소된 로고 -->
+      <div class="logo">
+        <!-- <img src="/path/to/logo-icon.png" alt="Logo" class="logo-icon" /> -->
+      </div>
+
+      <!-- 네비게이션 메뉴 -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#about" @click.prevent="scrollTo('about')">About</a></li>
+          <li><a href="#projects" @click.prevent="scrollTo('projects')">Projects</a></li>
+          <li><a href="#skills" @click.prevent="scrollTo('skills')">Skills</a></li>
+        </ul>
+      </nav>
+
+      <!-- 언어 및 테마 선택 -->
+      <div class="controls">
+        <div class="language-switcher">
+          <button @click="translate(0)">한국어</button>
+          <button @click="translate(1)">English</button>
+          <button @click="translate(2)">日本語</button>
+        </div>
+        <div class="theme-toggle">
+          <button v-if="!isDark" @click="toggleDarkMode()">🌞</button>
+          <button v-if="isDark" @click="toggleDarkMode()">🌜</button>
+        </div>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const isDark = ref(false);
+const languages = ['ko', 'en', 'jp'];
+
+function scrollTo(sectionId) {
+  const section = document.querySelector(`#${sectionId}`);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function translate(index) {
+  const targetLanguage = languages[index];
+  console.log(`Language changed to: ${targetLanguage}`);
+  // Add logic for language switching (e.g., i18n locale update)
+}
+
+function toggleDarkMode() {
+  isDark.value = !isDark.value;
+  document.documentElement.classList.toggle('dark-mode');
+}
+</script>
+
+<style scoped>
+.main-header {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo .logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #6e8efb;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-switcher button {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background: #f0f0f0;
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+</style>

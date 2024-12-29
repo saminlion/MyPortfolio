@@ -1,0 +1,315 @@
+<template>
+  <div class="project-detail">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button v-for="(tab, index) in tabs" :key="index" :class="{ active: activeTab === tab.id }"
+        @click="activeTab = tab.id">
+        {{ tab.label }}
+      </button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="tab-content" v-if="activeTab === 'basic'">
+      <!--프로젝트 기본 정보-->
+      <div class="info-wrapper">
+
+      <!--프로젝트 이름-->
+      <!-- <h2>{{ currentProject?.name }}</h2> -->
+
+      <!--프로젝트 이미지-->
+      <img :src="currentProject?.imageUrl" alt="Project Image" class="project-image" />
+
+      <Divider />
+
+      <!--프로젝트 설명-->
+      <p>{{ currentProject?.description }}</p>
+      <Divider />
+
+      <!--프로젝트 기술-->
+      <div class="tech-stack">
+        <span v-for="tech in currentProject?.tools" :key="tech" class="tech">{{ tech }}</span>
+      </div>
+      <Divider />
+
+      <!--프로젝트 개발 기간-->
+      <p><strong>{{ $t('project.devTime') }}:</strong> {{ currentProject?.developmentPeriod }}</p>
+      <Divider />
+
+      <!--프로젝트 참여 인원-->
+      <p><strong>{{ $t('project.devPeole') }}:</strong> {{ currentProject?.teamSize }}</p>
+      </div>
+
+    </div>
+    <div class="tab-content" v-if="activeTab === 'demo' && currentProject?.demoVideo">
+      <!--프로젝트 데모 영상-->
+      <div class="youtube-wrapper">
+        <youtube-video-player :youtubeUrl="currentProject.demoVideo">데모 영상 보기</youtube-video-player>
+        </div>
+    </div>
+
+    <!--프로젝트 주된 역활-->
+    <div class="tab-content" v-if="activeTab === 'role'">
+
+      <!-- 프로젝트 세부 설명 카드 -->
+      <div class="role-cards">
+        <div v-for="(detail, index) in currentProject?.details" :key="index" class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="role-content">
+            <p>{{ detail }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" v-if="activeTab === 'achive'">
+      <!-- 프로젝트 성과 리스트 -->
+      <div class="role-cards">
+        <div v-for="(detail, index) in currentProject?.details" :key="index" class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="role-content">
+            <p>{{ detail }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, watch, onMounted } from 'vue';
+import { useProjectStore } from '@/store/projectStore';
+import YoutubeVideoPlayer from '../components/Project/YoutubeVideoPlayer.vue';
+import { useI18n } from 'vue-i18n';
+import projectKo from '@/data/project_ko.json';
+import projectEn from '@/data/project_en.json';
+import projectJp from '@/data/project_jp.json';
+import { Divider } from 'primevue';
+
+// i18n locale 가져오기
+const { t } = useI18n();
+const { locale } = useI18n();
+
+const projectStore = useProjectStore(); // Pinia 글로벌 스토어
+
+const currentProject = ref(projectStore.project);
+const currentProjectId = ref(projectStore.id);
+
+const activeTab = ref('basic'); // 기본 정보 탭 활성화
+
+const tabs = ref([]);
+
+// 프로젝트 데이터를 저장할 상태
+const projects = ref([]);
+
+const jsonFiles = {
+  ko: projectKo,
+  en: projectEn,
+  jp: projectJp,
+};
+
+
+watch(
+  () => projectStore.id,
+  (id) => {
+
+    console.log(id);
+
+    if (id != 0) {
+      currentProjectId.value = id;
+      currentProject.value = projectStore.project;
+    }
+  }
+);
+
+// 언어 변경 감지
+watch(locale, (newLocale) => {
+  loadProjects(newLocale);
+
+  tabs.value = [
+    { id: 'basic', label: t('project.basicInfo') },
+    { id: 'demo', label: t('project.demoVideo') },
+    { id: 'role', label: t('project.mainPart') },
+    { id: 'achive', label: t('project.achieve') },
+  ];
+});
+
+// JSON 데이터 로드
+function loadProjects(lang) {
+  // jsonFiles[lang]가 배열인지 확인하고 기본값 설정
+  projects.value = Array.isArray(jsonFiles[lang]) ? jsonFiles[lang] : [];
+
+  console.log('projects:', projects.value);
+
+  // currentProjectId와 일치하는 프로젝트 찾기
+  currentProject.value = projects.value.find((project) => {
+    // 비교 전 타입 일치 보장
+
+    const projectId = project.id;
+
+    //82 10 001 //81 20 001
+    console.log(`Find ID : ${String(projectId).slice(2,7)}, Compare ID: ${String(currentProjectId.value).slice(2, 7)}`);
+
+    return String(projectId).slice(2, 7) === String(currentProjectId.value).slice(2, 7);
+  }) || null;
+}
+
+onMounted(() => {
+  tabs.value = [
+    { id: 'basic', label: t('project.basicInfo') },
+    { id: 'demo', label: t('project.demoVideo') },
+    { id: 'role', label: t('project.mainPart') },
+    { id: 'achive', label: t('project.achieve') },
+  ];
+});
+</script>
+
+<style scoped>
+.project-detail {
+  padding: 2rem;
+  background: var(--project-detail-background); /* 새로운 변수 적용 */
+  color: var(--project-detail-text-color); /* 새로운 변수 적용 */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 90%; /* 고정된 높이 */
+  width: 100%; /* 부모 크기에 맞게 조정 */
+}
+
+.project-detail h2 {
+  text-align: center;
+  margin-top: -1rem; /* 위로 올리기 */
+  margin-bottom: 1rem;
+  color: var(--project-detail-text-color); /* 텍스트 색상 변경 */
+}
+
+.project-image {
+  display: block;
+  border-radius: 8px;
+  margin-top: 0rem; /* 위로 올리기 */
+
+  width: 100%; /* 부모 크기에 맞게 조정 */
+  object-fit: cover; /* 이미지 비율 유지 */
+  
+  background: var(--project-detail-background); /* 배경 색상 변경 */
+}
+
+.tech-stack {
+  margin-bottom: 1rem;
+}
+
+.tech {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--link-hover-color);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--button-border);
+  height: 100%; /* 고정된 높이 */
+}
+
+
+.tab-content {
+  padding: 1.0rem;
+  border-radius: 8px;
+  background: var(--tab-content-background); /* 새로운 변수 적용 */
+  color: var(--tab-content-text-color); /* 새로운 변수 적용 */
+  max-height: 100%; /* 고정된 최대 높이 설정 */
+  overflow-y: auto; /* 스크롤 가능 */
+}
+
+.tab-content p, .tab-content span, .tab-content div {
+  color: var(--tab-content-text-color); /* 내부 텍스트 색상도 변경 */
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+.tabs button.active {
+  font-weight: bold;
+  color: var(--link-hover-color);
+  border-bottom: 2px solid var(--link-hover-color);
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 두 개의 열로 고정 */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.role-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--button-background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.role-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--link-hover-color);
+}
+
+.role-content p {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.85rem;
+  color: var(--text-color);
+}
+
+.youtube-wrapper {
+  display: block;
+  align-content: center;
+  width: 100%; /* 부모 크기에 따라 반응형으로 설정 */
+  max-width: 1000px; /* 최대 너비 */
+  height: 500px; /* 고정된 높이 */
+  margin: 0 auto; /* 중앙 정렬 */
+  background:  var(--background-color);/* 배경색 지정 (옵션) */
+  overflow: hidden; /* 콘텐츠 넘침 방지 */
+  border-radius: 2px; /* 선택적 둥근 모서리 */
+}
+
+.youtube-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.achievement-list {
+  margin: 0.5rem 0;
+}
+</style>

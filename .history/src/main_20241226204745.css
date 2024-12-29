@@ -1,0 +1,62 @@
+/* 기본 라이트 모드 스타일 */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --header-background: rgba(255, 255, 255, 0.9);
+    --link-color: #333333;
+    --link-hover-color: #6e8efb;
+    --button-background: #ffffff;
+    --button-border: #ccc;
+    --button-text: #333333;
+    --button-hover-background: #f0f0f0;
+    --button-hover-text: #333333;
+  }
+  
+  /* 다크 모드 스타일 */
+  .dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --header-background: rgba(51, 51, 51, 0.9);
+    --link-color: #ffffff;
+    --link-hover-color: #bbbbff;
+    --button-background: #444444;
+    --button-border: #666666;
+    --button-text: #ffffff;
+    --button-hover-background: #555555;
+    --button-hover-text: #ffffff;
+  }
+  
+  /* 기본 글로벌 스타일 */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  
+  button {
+    background: var(--button-background);
+    border: 1px solid var(--button-border);
+    color: var(--button-text);
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  button:hover {
+    background: var(--button-hover-background);
+    color: var(--button-hover-text);
+  }
+  
