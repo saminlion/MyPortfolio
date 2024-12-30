@@ -1,0 +1,124 @@
+{
+    "main": {
+        "title": "Client Development Portfolio"
+    },
+    "home": {
+        "title": "Home",
+        "name": "Passionate developer who thrives on collab, leadership, and embracing new challenges",
+        "description":"Hello! I am a developer who has honed my collaboration and leadership skills through winning first place in a 2015 school competition and serving as a team leader. I have grown by mastering various technologies and tools such as VR, metaverse, and Unity, and I am a passionate professional who enjoys new challenges and continuous growth"
+    },
+    "filters": {
+        "all": "All"
+    },
+    "about": {
+        "title": "Introduction",
+        "value1": "My Values",
+        "vision": "My life motto is Change To Chance (Change to seize an opportunity; change and opportunity are a fine line). My guiding principles are: 'Always be humble, always learn, do not fear transforming for your vision, and effort is the driving force of life.' I believe the most important things in life are experience and challenge.",
+        "experience": {
+            "title": "Experience",
+            "before": {
+                "title": "Experience Before Becoming a Developer",
+                "content": "Before I joined a company, I gained a lot of experience and challenges during my internship at NC SOFT. Watching professionals work was truly inspiring and made me think, 'Someday, I must be like them.' Through challenges and experiences, I met many people, exchanged ideas, and built relationships during the training period, which I believe is invaluable later in life. I think successful achievements are not based solely on the talent of one person but are realized through the opinions, experiences, and wisdom of many. Although I majored in planning, I take pride in my programming knowledge and my ability to communicate effectively with planners, which I consider a significant strength."
+            },
+            "after": {
+                "title": "Experience After Becoming a Developer",
+                "content": "Although I did not major in programming, I am well aware of my own shortcomings. With persistent effort, I have developed a variety of VR games and content. Over my eight years as a developer, I worked my way up to becoming a programming team lead. However, I constantly reflect on my inadequacies and maintain a mindset of continuous learning. I have extensive experience working with tools like Unity and Unreal Engine, as well as various VR devices and simulators. My projects include data-driven work using Raspberry Pi and web metaverse projects utilizing PlayCanvas. Recognizing my weaknesses, I studied Vue.js, creating a web portfolio and even developing a game currency calculator.With the language skills I gained through studying abroad and teaching myself Japanese, I have traveled to the United States and Japan for business trips, where I collaborated with local teams and served as an interpreter. I also translated and explained pamphlets to foreigners during exhibitions at COEX and KINTEX. As a result, I have worked not only with programming languages but also with spoken languages. To date, I have worked on over 30 projects, both large and small, and have even managed a VR arcade."
+            }
+        },
+        "personality": {
+            "title": "Personality",
+            "content": "The personality trait I am most proud of is my fearless approach to challenges. From studying abroad to creating games with diverse teams for the first time, I have never hesitated to step into the unknown. Additionally, I always take pride in wherever I belong and strive to make that place the best it can be, continuously improving myself in the process. One aspect I would like to change about myself is that I tend to focus on a single task with great intensity. While I excel at mastering one task, I sometimes neglect others when I have multiple responsibilities. A good example of my personality is when I participated in a game jam at my school, where we created a simple game in 48 hours. I was so motivated that I worked for over 30 hours, and my classmates praised my dedication. Inspired by this feedback, I tackled the next project, IronShadow, a 2D game that was my first attempt at programming as a developer. Despite numerous challenges, I found joy in overcoming obstacles and completing the project. For my final project, Shroud, I delved into 3D AI programming for the first time. The project was highly successful, and while many people said it would be impossible, it was a deeply meaningful challenge for me."
+        },
+        "career": {
+            "title": "Career Summary",
+            "items": [
+                {
+                    "date": "July 2010 ~ August 2010",
+                    "title": "NC Soft Intern",
+                    "description": "Planning training and encryption of AION planning documents"
+                },
+                {
+                    "date": "December 2016 ~ March 2017",
+                    "title": "Super Pong Planning and Development Lead",
+                    "description": [
+                        "Supported the 2017 VR Expo",
+                        "Commercialization of Super Pong at Lotte World VR Fantasia"
+                    ]
+                },
+                {
+                    "date": "May 2017 ~ July 2018",
+                    "title": "Development of VR Theme Park Games",
+                    "description": [
+                        "Developed the Everland T-Express experience",
+                        "Managed Jungle Express (operated in Songdo and Japan)",
+                        "Developed VR Park Tokyo horror chair content",
+                        "Developed Snow Bounce sensor game for Igloo Festival",
+                        "Created 5GX VR Skydiving content (5GX Game Festival)",
+                        "Supported the 2018 VR Expo",
+                        "Developed MusicVR"
+                    ]
+                },
+                {
+                    "date": "May 2019 ~ July 2024",
+                    "title": "VR/AR Game and Content Development",
+                    "description": [
+                        "Developed Yangju Aloha Heroes Game",
+                        "Developed KEIT Automotive Ride Experience",
+                        "Developed and maintained the VR Zone platform",
+                        "Developed wall sensor/VR content for Yangju Sports Welfare Center",
+                        "Created Sunchang immersive AR content",
+                        "Developed a suit-fitting simulation",
+                        "Developed a sports experience system for Gyeonggi Student Sports Center",
+                        "Created VR firefighting equipment training content",
+                        "Developed a metaverse lecture using VR Chat",
+                        "Developed XR Showroom client editor",
+                        "Created wall sensor content for a mobile vehicle",
+                        "Developed one VR content and simulator plugin for Gyeryong"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "title": "Knowledge and Education",
+            "items": [
+                {
+                    "date": "March 2016 ~ September 2016",
+                    "title": "Kyungil Vocational Training Center - Completed Game Programming Course"
+                },
+                {
+                    "date": "March 2019 ~ Present",
+                    "title": "Udemy - Online Academy",
+                    "description": [
+                        "Unreal Engine 4 Mastery: Create Multiplayer Games with C++",
+                        "The Ultimate Guide to 2D Mobile Game Development with Unity",
+                        "Unreal Engine C++ Developer: Learn C++ and Make Video Games",
+                        "Unreal Multiplayer Master: Online Game Development In C++",
+                        "Creating 3D Side-Scrolling Games with Unreal Engine 4",
+                        "Create Your First RPG And FPS Multiplayer Game In Unity",
+                        "Unity Multiplayer Game Development: Using Photon 2 (2019)",
+                        "DirectX 11 Programming"
+                    ]
+                }
+            ]
+        }
+    },
+    "project": {
+        "title": "Project",
+        "basicInfo": "Info",
+        "download": "Download",
+        "demoVideo": "Video",
+        "devTime": "Period",
+        "devPeole": "Members",
+        "devEnv": "Tools",
+        "desc": "Introduction",
+        "mainPart": "Role",
+        "viewDetails": "View Details",
+        "achieve": "Achievements"
+    },
+    "skill": {
+        "title": "Skills",
+        "program": "Programming Skills",
+        "coop": "Collaboration Skills",
+        "etc": "Other Skills"
+    }
+}

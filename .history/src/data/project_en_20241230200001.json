@@ -1,0 +1,760 @@
+[
+    {
+        "id": 1110001,
+        "name": "The Boy",
+        "downloadLink": "https://play.google.com/store/apps/details?id=com.gasbebe2.exam",
+        "demoVideo": "https://youtu.be/P7ImuxGcmCs",
+        "imageUrl": "Image/TheBoy_BG.png",
+        "developmentPeriod": "2016.06.20 ~ 2016.07.28",
+        "teamSize": "4 planners, 2 programmers",
+        "tools": ["Unity3D", "SQLite3"],
+        "description": "A 2.5D puzzle adventure game using water physics",
+        "role": "Main role in the project",
+        "details": [
+          "Implemented object interactions using the character's jump and abilities",
+          "Simulated large object movements using Distance Joint 2D, vectors, and sleep",
+          "Stored checkpoints and puzzle progress using SQLite",
+          "Saved in-game data with PlayerPrefs",
+          "Implemented water effects using Buoyancy Effect 2D"
+        ],
+        "outcomes":[
+            "Successfully published the project on the Google Play Store, demonstrating its distribution potential",
+            "Received positive feedback from fellow students and professors at the educational institution, recognizing its quality and completion"
+        ]
+    },
+    {
+        "id": 1110002,
+        "name": "Shroud",
+        "downloadLink": "http://community.vfs.com/arcade/game/shroud-4/",
+        "demoVideo": "https://youtu.be/S6dI7KkOpxU",
+        "imageUrl": "Image/Shroud_Title.png",
+        "developmentPeriod": "2015.08.01 ~ 2016.12.01",
+        "teamSize": "3 planners, 1 programmer",
+        "tools": ["Unity3D"],
+        "description": "A first-person 3D stealth game where players use three different monsters' abilities to escape",
+        "role": "Main role in the project",
+        "details": [
+          "Developed enemy AI using Unity's navigation system",
+          "Added AI for three unique enemies and implemented interactions through method calls",
+          "Designed adjustable camera effects using animation curves",
+          "Integrated Wwise SDK for immersive sound and streamlined collaboration with sound designers",
+          "Optimized particle effects using Popcorn FX"
+        ],
+        "outcomes":[
+            "Received positive feedback from gaming industry professionals immediately after presenting the graduation project",
+            "Gained favorable responses from students and faculty, earning recognition for the project's quality and completion"
+        ]
+    },
+    {
+        "id": 1110003,
+        "name": "Iron Shadow",
+        "downloadLink": "http://community.vfs.com/arcade/game/iron-shadow/",
+        "demoVideo": "https://youtu.be/U8zgX3Wy5uo",
+        "imageUrl": "Image/IronShadow_BG.jpg",
+        "developmentPeriod": "2015.04.01 ~ 2016.06.01",
+        "teamSize": "3 planners, 1 programmer",
+        "tools": ["Unity3D"],
+        "description": "A 2D platformer set in a cyberpunk future where the protagonist uses four different weapons to stop machines threatening the world",
+        "role": "Main role in the project",
+        "details": [
+          "Implemented gravity bullets using real-time layer changes with Vector3.Lerp",
+          "Designed enemies that approach the player for melee attacks and shoot from a distance",
+          "Developed over five interactive objects that respond to ice, electricity, and gravity guns",
+          "Created a boss that changes attack patterns across three phases"
+        ],
+        "outcomes":[
+            "Won the 'Best 2D Game' award at a campus-hosted event, officially proving the artistic value of the work"
+        ]
+    },
+    {
+        "id": 1110004,
+        "name": "AR Soccer",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/tTpEshZqgeg",
+        "imageUrl": "Image/ARSoccer_BG.png",
+        "developmentPeriod": "2016.08.29 ~ 2016.09.02",
+        "teamSize": "3 programmers",
+        "tools": ["Unity3D"],
+        "description": "A 2D multiplayer soccer game where players select a character and play 1v1 matches",
+        "role": "Main role in the project",
+        "details": [
+          "Synchronized character movements using Photon",
+          "Implemented character switching for both players",
+          "Randomized background music upon completion of a track",
+          "Developed controls for 1v1 soccer gameplay"
+        ],
+        "outcomes":[]
+    },
+    {
+        "id": 1110005,
+        "name": "AR Subway",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/iM0tW_ktuQE",
+        "imageUrl": "Image/ARSubway_Bg.png",
+        "developmentPeriod": "2016.09.03 ~ 2016.09.09",
+        "teamSize": "2 programmers",
+        "tools": ["Unity3D"],
+        "description": "A 2D shooting game where players use GPS to travel between subway stations and defend against zombie attacks",
+        "role": "Main role in the project",
+        "details": [
+          "Developed shooting, reloading, and weapon-switching mechanics with sound effects",
+          "Used LBS to generate station-specific defenses based on GPS coordinates",
+          "Implemented automatic enemy spawning and adjusted enemy count based on station data"
+        ],
+        "outcomes":[]
+    },
+    {
+        "id": 1110006,
+        "name": "VR GMMiner",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/ovi8N7fVxuI",
+        "imageUrl": "Image/Port_GMMiner.mp4_20190305_094221.254.jpg",
+        "developmentPeriod": "2017.05.15 ~ 2017.06.30",
+        "teamSize": "1 programmer, 1 planner, 1 artist",
+        "tools": ["Unity3D", "HTC Vive"],
+        "description": "A VR job simulation game where the player becomes a miner, drills rocks with a jackhammer, plants dynamite, and proceeds by detonating it.",
+        "role": "Main responsibilities in the project",
+        "details": [
+          "Developed the overall gameplay",
+          "Adjusted jackhammer operation and dynamite detonation to fit VR interaction using both hands",
+          "Optimized the game for VR devices"
+        ],
+        "outcomes":[
+            "Installed VR experience content at Gwangmyeong Cave, providing visitors with a new immersive experience",
+            "Contributed to extending visitor stay and enhancing satisfaction through VR experiences",
+            "Established as a unique regional tourism attraction by utilizing VR technology",
+            "Maximized the appeal of the content by visually promoting the vivid VR experience"
+        ]
+    },
+    {
+        "id": 1110007,
+        "name": "VR Attraction Engineer",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/nOVQAwYoCdA",
+        "imageUrl": "Image/Port_Attraction Enginner.mp4_20190305_094804.200.jpg",
+        "developmentPeriod": "2018.02.20 ~ 2018.04.30",
+        "teamSize": "2 programmers, 1 planner, 2 artists",
+        "tools": ["Unity3D", "Samsung Odyssey"],
+        "description": "A VR job simulation game where the player becomes a maintenance engineer for Everland's T-Express roller coaster, identifying and fixing track issues.",
+        "role": "Main responsibilities in the project",
+        "details": [
+          "Served as the lead programmer, managing the overall development",
+          "Developed tools for players to use during gameplay",
+          "Conducted R&D and integration with Samsung Odyssey",
+          "Developed the final drop section and effects such as tool animations",
+          "Optimized the game for VR devices"
+        ],
+        "outcomes":[
+            "Operated a VR job experience program for students at a Korean amusement park, providing educational content",
+            "Simulated potentially dangerous real-life scenarios in a virtual environment to effectively deliver safety education"
+        ]
+    },
+    {
+        "id": 1110008,
+        "name": "Snow Pang",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/Q5-dT9xGEsk",
+        "imageUrl": "Image/Port_SnowScreen.mp4_20190305_095327.808.jpg",
+        "developmentPeriod": "2018.01.03 ~ 2018.02.17",
+        "teamSize": "2 programmers, 1 planner, 2 artists",
+        "tools": ["Unity3D", "360 Laser Sensor"],
+        "description": "A game designed for children where players use a sensor attached to a wall to throw balls at approaching monsters and save their village.",
+        "role": "Main responsibilities in the project",
+        "details": [
+          "Developed sensor integration and hit detection mechanics",
+          "Created and managed monster generation and processing",
+          "Designed and implemented scene transition UI and general UI elements"
+        ],
+        "outcomes":[
+            "Provided immersive content for children at the festival, achieving high participation and satisfaction rates",
+            "Vividly recreated igloos and a winter theme, offering a safe and enjoyable experience for kids",
+            "Received widespread praise from visitors and festival organizers for its creative and educational content"
+        ]
+    },
+    {
+        "id": 1110009,
+        "name": "Nori Pang",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/J2sKLF88804",
+        "imageUrl": "Image/Port_ETC.mp4_20190305_101050.207.jpg",
+        "developmentPeriod": "2018.01.03 ~ 2018.02.17",
+        "teamSize": "2 Programmers, 1 Planner, 2 Artists",
+        "tools": [
+            "Unity3D",
+            "360 Laser Sensor"
+        ],
+        "description": "A children's game where players throw balls at bubbles on a wall to rescue characters using wall-mounted sensors.",
+        "role": "Primary role in this project",
+        "details": [
+            "Sensor integration and hit detection development",
+            "Development of monster generation and handling",
+            "UI development, including scene transitions and general UI design"
+        ],
+        "outcomes":[
+            "Provided immersive content for children at the festival, achieving high participation and satisfaction rates",
+            "Received widespread praise from visitors and festival organizers for its creative and educational content"
+        ]
+    },
+    {
+        "id": 1110010,
+        "name": "Music VR",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/qbObJn42b7E",
+        "imageUrl": "Image/VRMusic.png",
+        "developmentPeriod": "2018.02.03 ~ 2018.04.17",
+        "teamSize": "1 Programmer, 1 Planner, 1 Artist",
+        "tools": [
+            "Unity3D",
+            "HTC Vive"
+        ],
+        "description": "An immersive VR music performance where players sing to virtual avatars cheering for them in a concert hall.",
+        "role": "Primary role in this project",
+        "details": [
+            "Effect optimization",
+            "System implementation using HTC Vive",
+            "Background changes in sync with the music",
+            "Interactive system using a microphone to encourage avatar cheers"
+        ],
+        "outcomes":[]
+    },
+    {
+        "id": 1110011,
+        "name": "VR Jungle Adventure",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/fhue1hNPhnQ",
+        "imageUrl": "Image/Port_VR Tokyo.mp4_20190305_101632.343.jpg",
+        "developmentPeriod": "2017.12.03 ~ 2018.01.01",
+        "teamSize": "1 Programmer, 1 Planner, 2 Artists",
+        "tools": [
+            "Unity3D",
+            "Oculus Rift",
+            "Pimax"
+        ],
+        "description": "A visual experience where players ride a minecart along a designated track and explore the scenery.",
+        "role": "Primary role in this project",
+        "details": [
+            "Modifications to rail assets for functionality",
+            "Animation control and tool development for specific actions"
+        ],
+        "outcomes":[
+            "Showcased innovative and immersive VR content at VR Park Tokyo and VR Expo Japan",
+            "Earned significant recognition for the quality and creativity of the content from participants and organizers"
+        ]
+    },
+    {
+        "id": 1110012,
+        "name": "VR Horror Chair",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/8xUlq8k5cPY",
+        "imageUrl": "Image/Port_VR Tokyo.mp4_20190305_101608.676.jpg",
+        "developmentPeriod": "2017.12.03 ~ 2018.01.10",
+        "teamSize": "1 Programmer, 1 Planner, 2 Artists",
+        "tools": [
+            "Unity3D",
+            "Oculus Rift",
+            "Pimax"
+        ],
+        "description": "A visual content experience in a haunted mansion, allowing players to explore various horror scenarios.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development for elevator movement",
+            "Animation control and tool development for specific actions"
+        ],
+        "outcomes":[
+            "Showcased innovative and immersive VR content at VR Park Tokyo and VR Expo Japan",
+            "Earned significant recognition for the quality and creativity of the content from participants and organizers"
+        ]
+    },
+    {
+        "id": 1110013,
+        "name": "Forest Garden",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/N2evCK-xFLQ",
+        "imageUrl": "Image/Port_ETC.mp4_20190305_100803.045.jpg",
+        "developmentPeriod": "2018.05.10 ~ 2018.07.20",
+        "teamSize": "1 Programmer, 1 Planner, 1 Artist",
+        "tools": [
+            "Unity3D"
+        ],
+        "description": "A system where photos are sent, applied to animals, and displayed alongside their animations.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development for loading and applying photos from folders onto animals",
+            "Animal animation application and adjustments"
+        ],
+        "outcomes":[]
+    },
+    {
+        "id": 1110014,
+        "name": "Aloha Heroes",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/AlohaHeroes.jpg",
+        "developmentPeriod": "2019.05.07 ~ 2019.08.02",
+        "teamSize": "2 Programmers, 1 Planner, 2 Artists",
+        "tools": [
+            "Unity3D",
+            "HTC Vive"
+        ],
+        "description": "An FPS defense game where 1-4 players team up to defeat enemies and protect the Aloha Peace Hall.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development of enemy AI movements",
+            "Boss patterns and animation implementation",
+            "Multiplayer integration using Photon",
+            "Stage transition implementation"
+        ],
+        "outcomes":[
+        "Achieved high participation rates by installing at the Aloha Peace Pavilion"
+        ]
+    },
+    {
+        "id": 1110015,
+        "name": "KEIT Electronic System Development Project",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/cdnHXDIACY8",
+        "imageUrl": "Image/Car.jpg",
+        "developmentPeriod": "2019.05.21 ~ 2020.12.31",
+        "teamSize": "2 Programmers, 1 Planner, 2 Artists",
+        "tools": [
+            "Unity3D",
+            "HTC Vive"
+        ],
+        "description": "A two-content system allowing users to pick up objects in a VR world using tactile gloves and experience autonomous driving in a car.",
+        "role": "Primary role in this project",
+        "details": [
+            "Adaptation of external glove protocols for Unity3D compatibility",
+            "Implementation of steering wheel controls for spline-based vehicle movement"
+        ],
+        "outcomes":[
+            "Successfully accomplished a national project through collaboration with external companies"
+        ]
+    },
+    {
+        "id": 1110016,
+        "name": "Game Industry Advancement Support Project",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/rgw0KKZpu90",
+        "imageUrl": "Image/Hunted_EP2.jpg",
+        "developmentPeriod": "2019.06.01 ~ 2019.07.27",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Unity3D"
+        ],
+        "description": "Enhancements to an existing game system.",
+        "role": "Primary role in this project",
+        "details": [
+            "Localization (translation and voice recording) and application of an existing game system",
+            "Data table creation for English and Korean subtitles and dubbing",
+            "Fixing bugs and issues in the existing game system"
+        ],
+        "outcomes":[
+            "Resolved 90% of major bugs and improved user accessibility through localization, leading to an increase in global players",
+            "Integrated English/Korean subtitles and dubbing data, improving maintenance efficiency by approximately 30%"            
+        ]
+    },
+    {
+        "id": 1110017,
+        "name": "Startup Leap Package Support Project",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/nHqKA50YlmY",
+        "imageUrl": "Image/VRKID.PNG",
+        "developmentPeriod": "2019.06.26 ~ 2020.06.25",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Unity3D"
+        ],
+        "description": "Adapting over three existing VR games for kids into an all-in-one VR platform to expand content scalability.",
+        "role": "Primary role in this project",
+        "details": [
+            "Adaptation and implementation of over three existing kids' VR games into the all-in-one VR platform",
+            "Adjustment of control schemes for compatibility with the new platform",
+            "Version control to maintain up-to-date content through downloads and uploads",
+            "Implementation of ad playback when games are not in use"
+        ],
+        "outcomes":[
+            "Secured content stability by resolving over 90% of major bugs and significantly enhanced content management efficiency within stores through platformization",
+"Successfully executed a collaborative project with other companies using new Meta Quest 2 devices, strengthening VR device compatibility"
+        ]
+    },
+    {
+        "id": 1110018,
+        "name": "Yangju Sports Welfare Center Dinosaur Ball Throwing Game",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/NnoSPPxEGHQ",
+        "imageUrl": "Image/dino.jpg",
+        "developmentPeriod": "2019.09.20 ~ 2019.10.20",
+        "teamSize": "1 Programmer, 1 Artist, 1 Planner",
+        "tools": [
+            "Unity3D",
+            "Rplidar 360 Laser Sensor"
+        ],
+        "description": "A game where players use sensors on a wall to throw balls at dinosaurs, part of a larger content collection for the Yangju Sports Welfare Center.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development of the overall game system",
+            "Dinosaur AI and animation looping",
+            "Implementation of systems to add variety across stages"
+        ]
+    },
+    {
+        "id": 1110019,
+        "name": "Yangju Sports Welfare Center Punch Pang VR",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/XxrwirIJAZo",
+        "imageUrl": "Image/PuchPang.jpg",
+        "developmentPeriod": "2019.10.24 ~ 2020.01.10",
+        "teamSize": "2 Programmers, 2 Artists, 1 Planner",
+        "tools": [
+            "Unity3D",
+            "HTC Vive"
+        ],
+        "description": "A VR experience with over three types of content for the Yangju Sports Welfare Center.",
+        "role": "Primary role in this project",
+        "details": [
+            "Base system work for the Punch Pang content"
+        ]
+    },
+    {
+        "id": 1110020,
+        "name": "Sunchang Fermentation Science AR Gun & Video System Development",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/VxJ0iziH3hI",
+        "imageUrl": "Image/Teraform.png",
+        "developmentPeriod": "2019.10.24 ~ 2020.01.10",
+        "teamSize": "3 Programmers, 2 Artists, 2 Planners",
+        "tools": [
+            "Unity3D"
+        ],
+        "description": "An AR-based project where players capture flying microorganisms and use them to terraform Mars.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development of a system where microorganisms float around using the mobile camera",
+            "Implementation of a Bluetooth-enabled gun system for shooting microorganisms",
+            "Sending captured microorganisms to a networked PC with projectors for synchronized effects and animations",
+            "Video editing and synchronization across multiple PCs for consistent playback"
+        ]
+    },
+    {
+        "id": 1110021,
+        "name": "Suit Fitting Simulation",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/CR12E0LH2Zw",
+        "imageUrl": "Image/Suit.jpg",
+        "developmentPeriod": "2019.09.01 ~ 2021.03.20",
+        "teamSize": "2 Programmers, 1 Artist, 1 Planner",
+        "tools": [
+            "Unity3D"
+        ],
+        "description": "A solution project for measuring body size virtually on mobile and PC to provide custom suit fitting services.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implementation of UI/UX tailored to the system",
+            "Development of interactive UI integration",
+            "Ensuring compatibility across mobile and PC resolutions"
+        ]
+    },
+    {
+        "id": 1110022,
+        "name": "Gyeonggi Student Sports Center Experience System",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/Sport.PNG",
+        "developmentPeriod": "2020.12.21 ~ 2021.02.04",
+        "teamSize": "3 Programmers, 2 Artists, 2 Planners",
+        "tools": [
+            "Unity3D"
+        ],
+        "description": "A project offering over six types of exercise content to transform the monotonous traditional physical education system into a game-like, enjoyable activity.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development of UI and base systems for over six types of exercise content",
+            "Implementation of consistent and easy-to-maintain gameplay mechanics for all exercise types"
+        ]
+    },
+    {
+        "id": 1110023,
+        "name": "Fire Equipment VR Training Content Production",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/a28cF5qbHmU",
+        "imageUrl": "Image/Fire.PNG",
+        "developmentPeriod": "2021.08.02 ~ 2022.01.31",
+        "teamSize": "1 Programmer, 1 Artist, 1 Planner",
+        "tools": [
+            "Unity3D",
+            "Meta Quest"
+        ],
+        "description": "A VR training project using Meta Quest to simulate fire equipment installation, including pressure calculations and electrical setups for building safety.",
+        "role": "Primary role in this project",
+        "details": [
+            "Development of a complete operational system and virtual wire connection simulation",
+            "Implementation of a results system to identify successful and failed operations",
+            "Pressure system calculations to verify proper equipment installation"
+        ]
+    },
+    {
+        "id": 1110024,
+        "name": "Metaverse Lecture Using VR Chat",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/ArnfQcLF7Ds",
+        "imageUrl": "Image/meta.PNG",
+        "developmentPeriod": "2022.10.21 ~ 2022.12.04",
+        "teamSize": "1 Programmer, 2 Artists, 1 Planner",
+        "tools": [
+            "Unity3D",
+            "VR CHAT"
+        ],
+        "description": "A system utilizing VR Chat to host presentations and discussions for large groups.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implementation of YouTube playback and external video streaming in VR Chat",
+            "Development of features allowing administrators to trigger events like fireworks in VR Chat"
+        ]
+    },
+    {
+        "id": 1120001,
+        "name": "The Truth",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/JOdlr2gMfSQ",
+        "imageUrl": "Image/TheTruth_BG.jpg",
+        "developmentPeriod": "2015.04.01 ~ 2016.04.23",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Unreal Engine 4"
+        ],
+        "description": "A 3D RPG game where players progress by defeating enemies.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented character movements and attacks",
+            "Developed AI patterns for enemies and bosses",
+            "Created cinematic videos using Matinee"
+        ]
+    },
+    {
+        "id": 1120002,
+        "name": "Super Pong VR",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/_1b4J0Qq10I",
+        "imageUrl": "Image/super Pong.jpg",
+        "developmentPeriod": "2016.12.20 ~ 2017.03.16",
+        "teamSize": "1 Programmer, 1 Artist, 1 Planner",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC Vive"
+        ],
+        "description": "A 3D VR sports game where players compete with other players or AI to score goals in a map filled with obstacles using rackets.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented HTC Vive gameplay",
+            "Developed feedback based on the speed of racket swings using Vive controllers and adjusted ball speed accordingly",
+            "Created AI movements to follow the ball",
+            "Implemented AI ball returns with rackets",
+            "Increased difficulty when AI goes out of bounds or is losing",
+            "Implemented time-attack mode with a set time limit",
+            "Developed scoring system to determine winners",
+            "Implemented set-based gameplay to determine overall victory",
+            "Added diverse obstacles that affect ball speed, direction, or trajectory",
+            "Synchronized ball speed",
+            "Synchronized racket movements between players",
+            "Added waiting effects until players connect",
+            "Developed travel system for server and client to move to the next map"
+        ]
+    },
+    {
+        "id": 1120003,
+        "name": "Samdo Naval Headquarters Content",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/-4f3X3rpkzs",
+        "imageUrl": "Image/ty.jpg",
+        "developmentPeriod": "2019.05.21 ~ 2020.12.31",
+        "teamSize": "1 Planner, 1 External Vendor Manager",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC Vive"
+        ],
+        "description": "A VR game with six different mini-games set in the Samdo Naval Headquarters.",
+        "role": "Primary role in this project",
+        "details": [
+            "Managed and provided feedback on content developed by external vendors",
+            "Adjusted and modified specific content",
+            "Provided support for final installation and operations"
+        ]
+    },
+    {
+        "id": 1120004,
+        "name": "XR Showroom",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/-zZYe1mGO04",
+        "imageUrl": "Image/XR.PNG",
+        "developmentPeriod": "2021.08.01 ~ 2023.12.31",
+        "teamSize": "4 Programmers, 4 Artists, 3 Planners",
+        "tools": [
+            "Unreal Engine 4",
+            "Unreal Engine 5",
+            "Photon",
+            "Android",
+            "Mac"
+        ],
+        "description": "A social XR showroom project for cultural product distribution, where users create their own stores, upload them, and allow consumers to try on clothes using avatars and purchase items.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented a system allowing avatars to enter uploaded stores",
+            "Developed a system for trying on and purchasing clothes",
+            "Synchronized movements of other users within the store",
+            "Implemented chat functionality between users or with sellers in the store",
+            "Created a system for placing clothes in the store",
+            "Optimized and updated the existing system for placing items and clothes in stores",
+            "Updated UI systems to align with new designs and made changes easier by data-driven implementation",
+            "Ensured functionality on Android phones, tablets, and iPads",
+            "Optimized UI for various devices"
+        ]
+    },
+    {
+        "id": 1120005,
+        "name": "Mobile Vehicle Jamboree Camping Experience",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/660pRusb-no",
+        "imageUrl": "Image/camping.jpg",
+        "developmentPeriod": "2022.05.13 ~ 2022.08.31",
+        "teamSize": "2 Programmers, 3 Artists, 2 Planners",
+        "tools": [
+            "Unreal Engine 4"
+        ],
+        "description": "A content experience for all ages using a mobile large vehicle, a projector, and laser sensors to find objects or items like campfire wood through touch interactions.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed a touch system to interact with objects using touch sensors",
+            "Implemented the overall game system",
+            "Supported ride content programs and implemented systems like Planar VR",
+            "Developed a system to toggle projects and content on and off using tablets"
+        ]
+    },
+    {
+        "id": 1120006,
+        "name": "Portable Shooting Game DMZ Underground",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/Under.jpg",
+        "developmentPeriod": "2022.05.19 ~ 2023.09.05",
+        "teamSize": "2 Programmers, 2 Planners, 5 Artists",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC Vive"
+        ],
+        "description": "A multiplayer content experience using backpack PCs and VR, allowing players to walk in the real world while shooting enemies.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed a system to move characters in sync with users' footsteps using mobile backpacks",
+            "Implemented animal and human enemy AI",
+            "Created systems for shooting and reloading guns",
+            "Implemented event systems occurring within the map",
+            "Designed a data table for enemies and events to simplify balancing tests for planners",
+            "Developed a system to record and synchronize each player's scores"
+        ]
+    },
+    {
+        "id": 1120007,
+        "name": "Land, Sea, and Air Force Simulation",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/airforce.jpg",
+        "developmentPeriod": "2022.05.19 ~ 2023.09.05",
+        "teamSize": "2 Programmers, 2 Planners, 5 Artists",
+        "tools": [
+            "Unreal Engine 4",
+            "HTC Vive",
+            "Simtools"
+        ],
+        "description": "A VR content experience allowing users to virtually operate an army tank, a navy submarine, and an air force fighter jet.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed plugins to integrate external 6-axis simulators with Unreal Engine and enable simulator operation",
+            "Improved existing systems for the air force and implemented enemy fighter jet appearances and targeting systems",
+            "Modified flight paths to enhance the realism of the flying experience"
+        ]
+    },
+    {
+        "id": 1130001,
+        "name": "Road of Pilgrim",
+        "downloadLink": "",
+        "demoVideo": "https://youtu.be/Ss_lU3XqzJs",
+        "imageUrl": "Image/Road of Pilgrim_BG.jpg",
+        "developmentPeriod": "2015.06.01 ~ 2016.06.30",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Cocos2d-x",
+            "C++"
+        ],
+        "description": "2D Action Run Game",
+        "role": "Primary role in this project",
+        "details": [
+            "Used tile maps to designate the map, enemy, and player spawn locations",
+            "Dynamically generated enemies at designated spawn points using vector and sprite creation features",
+            "Implemented sound playback for various platforms using sound textures, macros, and preprocessors",
+            "Applied hit detection and knockback effects using Box2D's real-time changes to static and dynamic bodies with collision handling",
+            "Optimized game memory by managing creation and removal of Box2D objects and vectors",
+            "Configured masks to prevent enemies' attacks from hitting each other while allowing the player's attacks to neutralize enemy attacks",
+            "Used scheduling to dynamically generate and remove particles and bodies within the game"
+        ]
+    },
+    {
+        "id": 1130002,
+        "name": "VRZONE Launcher",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/platform.PNG",
+        "developmentPeriod": "",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Winform",
+            "C#"
+        ],
+        "description": "A launcher facilitating communication between the platform and individual PCs for tasks such as launching or closing games.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented UDP communication with the platform",
+            "Relayed the status of each PC (VR headsets, controller battery information, etc.)",
+            "Developed routines for game execution and closure",
+            "Added functionality to play advertisement videos after game closure if available"
+        ]
+    },
+    {
+        "id": 1130003,
+        "name": "Electromyography",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/ems.jpg",
+        "developmentPeriod": "2022.05.21 ~ 2022.07.31",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Winform",
+            "C#"
+        ],
+        "description": "A sensor integration project using electromyography devices to assist with exercise.",
+        "role": "Primary role in this project",
+        "details": [
+            "Developed Bluetooth communication between the electromyography device and PC",
+            "Displayed electromyography EMS formulas graphically on PC"
+        ]
+    },
+    {
+        "id": 130004,
+        "name": "VR Delta Platform",
+        "downloadLink": "",
+        "demoVideo": "",
+        "imageUrl": "Image/deltakiosk.png",
+        "developmentPeriod": "",
+        "teamSize": "1 Programmer",
+        "tools": [
+            "Winform",
+            "C#"
+        ],
+        "description": "A launcher and platform integration between Delta kiosks and PCs, including UI implementation.",
+        "role": "Primary role in this project",
+        "details": [
+            "Implemented TCP communication between Delta kiosks and PCs",
+            "Developed an advertisement playback feature within the PC launcher",
+            "Created routines for game execution and closure"
+        ]
+    }
+]

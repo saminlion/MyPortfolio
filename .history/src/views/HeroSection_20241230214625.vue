@@ -1,0 +1,497 @@
+<template>
+  <!-- Hero 섹션 -->
+  <section class="hero">
+    <!-- Hero 헤더 -->
+    <div class="hero-header">
+      <!-- 네비게이션 메뉴 -->
+      <nav class="nav-menu">
+        <ul>
+          <!-- 홈 링크 -->
+          <li>
+            <router-link to="/" :class="{ active: currentPage === 'home' }">{{ $t('home.title') }}</router-link>
+          </li>
+          <!-- 프로젝트 링크 -->
+          <li>
+            <router-link to="/projects" :class="{ active: currentPage === 'projects' }">{{ $t('project.title') }}</router-link>
+          </li>
+          <!-- 소개 링크 -->
+          <li>
+            <router-link to="/about" :class="{ active: currentPage === 'about' }">{{ $t('about.title') }}</router-link>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 컨트롤 섹션 -->
+      <div class="controls">
+        <!-- 언어 변경 스위처 -->
+        <div class="language-switcher">
+          <span class="current-language">{{ currentLanguage }}</span>
+          <button
+            v-for="(lang, index) in languages"
+            :key="lang"
+            @click="translate(index)"
+            :class="{ active: locale.value === lang }"
+          >
+            {{ lang.toUpperCase() }}
+          </button>
+        </div>
+
+        <!-- 다크 모드 토글 -->
+        <div class="theme-toggle">
+          <!-- 라이트 모드 버튼 -->
+          <button v-if="!isDark" @click="toggleDarkMode()">🌞</button>
+          <!-- 다크 모드 버튼 -->
+          <button v-if="isDark" @click="toggleDarkMode()">🌜</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero 콘텐츠: Live2D 캔버스와 페이지 내용 -->
+    <div class="hero-content detail-layout">
+      <!-- 디졸브 애니메이션이 포함된 캔버스 -->
+      <div
+        v-show="!animationCompleted"
+        :class="{ dissolve: isDetailView }"
+        @animationend="onDissolveComplete"
+        class="canvas-box"
+      ></div>
+
+      <!-- 프로젝트 상세보기 -->
+      <div v-show="animationCompleted" v-if="isProject" class="project-detail-container">
+        <ProjectDetailView />
+      </div>
+
+      <!-- 홈 콘텐츠 -->
+      <div v-show="isHome" class="home-info">
+        <HomeInfo />
+      </div>
+
+      <!-- 소개 콘텐츠 -->
+      <div class="about-info" v-show="isAbout">
+        <AboutView />
+      </div>
+
+      <!-- Live2D 캔버스 -->
+      <canvas ref="live2dCanvas" class="live2d-canvas" @click="Live2DClick"></canvas>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref, watch, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+import { LAppModel } from '../utils/LAppModel.js';
+import { useGlobalStore } from '@/store/globalStore';
+import ProjectDetailView from '../components/Project/ProjectDetailView.vue';
+import { useProjectStore } from '@/store/projectStore';
+import HomeInfo from '@/components/Home/HomeInfo.vue';
+import AboutView from './AboutView.vue';
+
+const live2dCanvas = ref(null);
+const live2DLoader = ref(null);
+
+const projectStore = useProjectStore(); // Pinia 글로벌 스토어
+const globalStore = useGlobalStore(); // Pinia 글로벌 스토어
+
+const route = useRoute();
+const { locale } = useI18n();
+
+const currentLanguage = ref(''); // 현재 선택된 언어
+const languages = ['ko', 'en', 'jp'];
+const isDark = ref(false);
+const isProject = ref(false);
+const isAbout = ref(false);
+
+// 페이지별 문구 및 Live2D 모델 설정
+const texts = {
+  home: { title: 'Welcome to My Portfolio', subtitle: 'Specializing in VTuber and VR' },
+  projects: { title: 'Explore My Projects', subtitle: 'Filter and discover my work' },
+  about: { title: 'About Me', subtitle: 'Learn more about my journey' },
+};
+const models = {
+  home: { modelPath: '/Model/Wanko/', modelFileName: 'Wanko.model3.json', motionName: '00_idle', poseFileName: '', scale: 2.5, xPos: 0, yPos: 0, groupName: 'Idle', groupIndex: 0 },
+  projects: { modelPath: '/Model/Rice/', modelFileName: 'Rice.model3.json', motionName: 'haru_g_m15', poseFileName: '', scale: 1.5, xPos: 0, yPos: 0, groupName: 'Idle', groupIndex: 0 },
+  about: { modelPath: '/Model/tororo/', modelFileName: 'tororo.model3.json', motionName: '00_idle', poseFileName: 'tororo.pose3.json', scale: 1.6, xPos: 0, yPos: 0, groupName: 'Idle', groupIndex: 0 },
+};//FlickRight
+
+const currentPage = ref(route.name || 'home');
+const currentText = ref(texts[currentPage.value]);
+const currentModel = ref(models[currentPage.value] || models.home);
+
+const isDetailView = ref(false);
+const animationCompleted = ref(false);
+const isHome = ref(true);
+
+/* 라우트 변경 감지 및 상태 업데이트 */
+watch(
+  () => route.name,
+  (newPage) => {
+    currentPage.value = newPage; // 현재 라우트 업데이트
+
+    currentText.value = texts[newPage] || texts.home; // 페이지에 맞는 텍스트 설정
+
+    currentModel.value = models[newPage] || models.home;// 페이지에 맞는 Live2D 모델 설정
+
+    if (currentPage.value === 'projects') {
+      animationCompleted.value = false; // 상태 초기화
+      isProject.value = true;
+      isHome.value = false;
+      isAbout.value = false;
+    }
+
+    else if (currentPage.value === 'home') {
+      animationCompleted.value = true; // 상태 초기화
+      isProject.value = false;
+      projectStore.id = 0; // 프로젝트 상태 초기화
+      isHome.value = true;
+      isAbout.value = false;
+    }
+    else {
+      animationCompleted.value = true; // 상태 초기화
+      isProject.value = false;
+      projectStore.id = 0; // 프로젝트 상태 초기화
+      isHome.value = false;
+      isAbout.value = true;
+    }
+    console.log('currentPage.value', currentPage.value, isProject.value, isHome.value);
+
+    loadLive2DModel(); // Live2D 모델 로드
+  }
+);
+
+/* 상세보기 상태 변경 감지 */
+watch(isDetailView, (newVal) => {
+
+  if (newVal) {
+    console.log("Dissolve effect triggered");
+
+    live2DLoader.value.CustomMotion('TapBody', 0, 2, false, () => {
+      console.log('Dissolve animation starting...');
+
+      triggerDissolveAnimation(); // 디졸브 애니메이션 실행
+    });
+  }
+});
+
+/* 프로젝트 ID 상태 변경 감지 */
+watch(
+  () => projectStore.id,
+  (id) => {
+
+    console.log(id);
+
+    isDetailView.value = id != 0; // ID가 0이 아니면 상세보기 활성화
+  }
+);
+
+/* Live2D 캔버스를 클릭했을 때 동작 */
+function Live2DClick() {
+  if (currentPage.value !== 'projects') {
+    live2DLoader.value.CustomMotion('Tap', 0, 2, true);
+  }
+}
+
+/* 디졸브 애니메이션 실행 */
+function triggerDissolveAnimation() {
+  const canvas = document.querySelector('.canvas-box');
+
+  if (!canvas) {
+    console.error('Canvas not found for dissolve animation');
+    return;
+  }
+
+  canvas.classList.add('dissolve-effect'); // CSS 애니메이션 클래스 추가
+
+  // 애니메이션 종료 후 처리
+  canvas.addEventListener('animationend', () => {
+    console.log('Dissolve animation completed');
+    canvas.classList.remove('dissolve-effect');
+  }, { once: true }); // 이벤트 한 번만 실행
+}
+
+/* 디졸브 애니메이션 종료 처리 */
+function onDissolveComplete() {
+  animationCompleted.value = true;
+}
+
+/* Live2D 모델 로드 함수 */
+function loadLive2DModel() {
+  if (!live2dCanvas.value) {
+    console.error('Canvas element not found!');
+    return;
+  }
+
+  const { modelPath, modelFileName, motionName, poseFileName, scale, xPos, yPos, groupName, groupIndex } = currentModel.value;
+
+  const canvas = live2dCanvas.value;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = canvas.clientWidth * dpr;
+  canvas.height = canvas.clientHeight * dpr;
+
+  try {
+    const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true });
+    if (!gl) throw new Error('WebGL context not available!');
+
+    live2DLoader.value = new LAppModel(canvas, modelPath, modelFileName, motionName, poseFileName, scale, xPos, yPos, groupName, groupIndex);
+    live2DLoader.value.initialize(); // 모델 초기화
+
+    // live2DLoader.value.startIdleAnimation();
+  } catch (error) {
+    console.error('Error loading Live2D model:', error.message);
+  }
+}
+
+function translate(index) {
+  const selectedLanguage = languages[index];
+  locale.value = selectedLanguage; // 언어 변경
+  globalStore.setLanguage(selectedLanguage); // Pinia 업데이트
+  currentLanguage.value = languages[index].toUpperCase(); // 현재 언어 표시 업데이트
+  localStorage.setItem('currentLanguage', currentLanguage.value); // 로컬 스토리지에 언어 저장
+}
+
+/* 다크 모드 토글 함수 */
+function toggleDarkMode() {
+  const htmlElement = document.documentElement;
+  isDark.value = !isDark.value; // 다크 모드 상태 변경
+  if (isDark.value) {
+    htmlElement.classList.add('dark-mode'); // 다크 모드 활성화
+  } else {
+    htmlElement.classList.remove('dark-mode');// 다크 모드 비활성화
+  }
+  localStorage.setItem('darkMode', isDark.value);// 로컬 스토리지에 저장
+}
+
+onMounted(() => {
+  loadLive2DModel(); // Live2D 모델 로드
+
+  const storedTheme = localStorage.getItem('darkMode'); // 저장된 테마 확인
+  if (storedTheme === 'true') {
+    isDark.value = true;
+    document.documentElement.classList.add('dark-mode');
+  }
+
+
+  if (currentPage.value === 'home') {
+    // 초기 상태 설정
+    animationCompleted.value = true;
+    isProject.value = false;
+    projectStore.id = 0;
+    isHome.value = true;
+  }
+
+  // 저장된 언어 불러오기
+  const savedLanguage = localStorage.getItem('currentLanguage') || 'EN';
+  currentLanguage.value = savedLanguage;
+  locale.value = savedLanguage.toLowerCase();
+});
+</script>
+
+<style scoped>
+.hero {
+  /* 부모 요소 */
+  position: relative;
+  height: 150vh;
+  /* 항상 화면 높이에 맞춤 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--hero-background);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: var(--header-background);
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 1rem;
+}
+
+.nav-menu ul li a.active {
+  font-weight: bold;
+  color: var(--link-hover-color);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-switcher .current-language {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 1rem;
+}
+
+.language-switcher button {
+  width: 50px;
+  height: 30px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background: var(--button-background);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.language-switcher button.active {
+  background: var(--link-hover-color);
+  color: #fff;
+}
+
+.language-switcher button:hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text);
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90vw;
+  /* 화면 너비의 90%로 설정 */
+  max-width: 1500px;
+  /* 최대 너비 제한 */
+  height: 90vh;
+  /* 높이를 유지 */
+  padding: 1rem;
+  margin: 0 auto;
+  /* 화면 중앙 정렬 */
+}
+
+
+.detail-layout {
+  position: relative;
+  /* 부모 요소 */
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.project-detail-container {
+  flex: 2;
+  /* 프로젝트 상세 영역에 일정 비율 할당 */
+  max-width: 50%;
+  left: 0%;
+  /* 전체 화면의 절반 너비로 제한 */
+  margin-right: 2rem;
+  background: var(--button-background);
+  border: 1px solid var(--button-border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  height: auto;
+  /* 긴 내용은 스크롤 가능 */
+}
+
+.canvas-box {
+  display: block;
+  /* 보이지 않을 경우를 대비 */
+  flex: 1;
+  max-width: 50%;
+  height: 600px;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+.dissolve-effect {
+  animation: dissolveEffect 1.5s forwards;
+}
+
+@keyframes dissolveEffect {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.home-info {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* 가로 최대 길이 제한 */
+  left: 0;
+  text-align: center; /* 텍스트 가운데 정렬 */
+  height: 860px;
+  padding: 1rem 1rem; /* 상하 여백, 좌우 여백 */
+  background: var(--button-background); /* 배경 색상 */
+  border: 1px solid var(--button-border); /* 테두리 추가 */
+  border-radius: 8px; /* 모서리를 둥글게 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+.about-info{
+  position: relative; /* 절대 위치로 설정 */
+  top: 50%; /* 수직 중앙 정렬 */
+  left: 0; /* 왼쪽 정렬 */
+  transform: translateY(-50%); /* 세로 중앙 보정 */
+  width: 100%; /* AboutView의 너비를 제한 */
+  height: 800px;
+  max-width: 800px; /* 최대 너비 제한 */
+  background: var(--button-background); /* 배경색 */
+  border: 1px solid var(--button-border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가 */
+  overflow: auto;
+}
+
+.live2d-canvas {
+  position: absolute;
+  /* 캔버스를 고정 위치에 배치 */
+  top: 50%;
+  /* 화면의 세로 중앙 정렬 */
+  right: 0%;
+  /* 오른쪽에 위치 */
+  transform: translateY(-50%);
+  /* 세로 중앙 보정 */
+  width: 800px;
+  /* 고정된 너비 */
+  height: 800px;
+  /* 고정된 높이 */
+  border-radius: 8px;
+  z-index: 9999;
+  /* 최상위로 설정 */
+}
+</style>
