@@ -49,8 +49,9 @@
     <div>
     <!-- Hero 콘텐츠: Live2D 캔버스와 페이지 내용 -->
      <div v-if="isLoading" class="loading-overlay">
-      <ProgressBar mode="indeterminate" style="height: 6px"></ProgressBar>
-      <!-- <p>Loading Live2D Model...</p> -->
+      <div class="spinner">
+        <p>Loading Live2D Model...</p>
+      </div>
      </div>
 
 
@@ -61,9 +62,7 @@
         :class="{ dissolve: isDetailView }"
         @animationend="onDissolveComplete"
         class="canvas-box"
-      >
-      <p class="canvas-text">{{ $t('project.viewDetails') }}</p>
-    </div>
+      ></div>
 
       <!-- 프로젝트 상세보기 -->
       <div v-show="animationCompleted" v-if="isProject" class="project-detail-container">
@@ -98,13 +97,10 @@ import ProjectDetailView from '../components/Project/ProjectDetailView.vue'; // 
 import { useProjectStore } from '@/store/projectStore'; // 프로젝트 상태 관리 (Pinia)
 import HomeInfo from '@/components/Home/HomeInfo.vue'; // 홈 화면 컴포넌트
 import AboutView from './AboutView.vue'; // 소개 화면 컴포넌트
-import 'nprogress/nprogress.css';
-import NProgress from 'nprogress';
 
 /* 캔버스 및 Live2D 로더 관련 상태 */
 const live2dCanvas = ref(null); // Live2D 캔버스 참조
 const live2DLoader = ref(null); // Live2D 모델 로더
-const isLoading = ref(true);
 
 /* Pinia 상태 */
 const projectStore = useProjectStore(); // 프로젝트 상태 관리
@@ -236,7 +232,7 @@ function onDissolveComplete() {
 }
 
 /* Live2D 모델 로드 함수 */
-async function loadLive2DModel() {
+function loadLive2DModel() {
   if (!live2dCanvas.value) {
     console.error('Canvas element not found!');
     return;
@@ -253,14 +249,8 @@ async function loadLive2DModel() {
     const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true });
     if (!gl) throw new Error('WebGL context not available!');
 
-    isLoading.value = true;
-    NProgress.start();
-
     live2DLoader.value = new LAppModel(canvas, modelPath, modelFileName, motionName, poseFileName, scale, xPos, yPos, groupName, groupIndex);
-    await live2DLoader.value.initialize(); // 모델 초기화
-
-    isLoading.value = false;
-    NProgress.done();
+    live2DLoader.value.initialize(); // 모델 초기화
 
     // live2DLoader.value.startIdleAnimation();
   } catch (error) {
@@ -313,7 +303,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 /* Hero 섹션 스타일 */
 .hero {
   /* Hero 전체 레이아웃 설정 */
@@ -457,17 +447,6 @@ onMounted(() => {
   height: 600px; /* 고정된 높이 */
   background-color: #000; /* 검은색 배경 */
   border-radius: 8px; /* 모서리 둥글게 */
-  justify-content: center;
-  align-items: center;
-}
-
-.canvas-text {
-  position: relative;
-  color: #fff; /* 흰색 글씨 */
-  font-size: 3rem; /* 글꼴 크기 */
-  font-family: 'Arial', sans-serif; /* 글꼴 설정 */
-  text-align: center; /* 텍스트 가운데 정렬 */
-  z-index: 10; /* 텍스트가 캔버스 위에 보이도록 설정 */
 }
 
 /* 디졸브 애니메이션 효과 */
@@ -528,32 +507,5 @@ onMounted(() => {
   height: 800px; /* 고정된 높이 */
   border-radius: 8px; /* 모서리 둥글게 */
   z-index: 9999; /* 최상위 레이어 */
-}
-
-.loading-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-}
-
-/* NProgress 커스터마이징 */
-#nprogress .bar {
-  height: 8px; /* 프로그레스 바 두께 설정 */
-  background: #29d; /* 프로그레스 바 색상 */
-}
-
-#nprogress .peg {
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d; /* 바 끝부분 효과 */
-}
-
-#nprogress .spinner {
-  display: none; /* 로딩 스피너 비활성화 (필요하면 유지 가능) */
 }
 </style>

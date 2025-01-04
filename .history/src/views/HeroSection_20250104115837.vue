@@ -457,12 +457,10 @@ onMounted(() => {
   height: 600px; /* 고정된 높이 */
   background-color: #000; /* 검은색 배경 */
   border-radius: 8px; /* 모서리 둥글게 */
-  justify-content: center;
-  align-items: center;
+  justify-items: center;
 }
 
 .canvas-text {
-  position: relative;
   color: #fff; /* 흰색 글씨 */
   font-size: 3rem; /* 글꼴 크기 */
   font-family: 'Arial', sans-serif; /* 글꼴 설정 */

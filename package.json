@@ -12,6 +12,7 @@
     "@primevue/themes": "^4.2.2",
     "axios": "^1.7.9",
     "live2d-render": "^0.0.5",
+    "nprogress": "^0.2.0",
     "pinia": "^2.3.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.2",

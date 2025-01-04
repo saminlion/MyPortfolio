@@ -462,7 +462,6 @@ onMounted(() => {
 }
 
 .canvas-text {
-  position: relative;
   color: #fff; /* 흰색 글씨 */
   font-size: 3rem; /* 글꼴 크기 */
   font-family: 'Arial', sans-serif; /* 글꼴 설정 */

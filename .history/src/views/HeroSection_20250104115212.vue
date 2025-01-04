@@ -61,9 +61,7 @@
         :class="{ dissolve: isDetailView }"
         @animationend="onDissolveComplete"
         class="canvas-box"
-      >
-      <p class="canvas-text">{{ $t('project.viewDetails') }}</p>
-    </div>
+      ></div>
 
       <!-- 프로젝트 상세보기 -->
       <div v-show="animationCompleted" v-if="isProject" class="project-detail-container">
@@ -98,8 +96,8 @@ import ProjectDetailView from '../components/Project/ProjectDetailView.vue'; // 
 import { useProjectStore } from '@/store/projectStore'; // 프로젝트 상태 관리 (Pinia)
 import HomeInfo from '@/components/Home/HomeInfo.vue'; // 홈 화면 컴포넌트
 import AboutView from './AboutView.vue'; // 소개 화면 컴포넌트
-import 'nprogress/nprogress.css';
 import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
 /* 캔버스 및 Live2D 로더 관련 상태 */
 const live2dCanvas = ref(null); // Live2D 캔버스 참조
@@ -313,7 +311,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 /* Hero 섹션 스타일 */
 .hero {
   /* Hero 전체 레이아웃 설정 */
@@ -457,17 +455,6 @@ onMounted(() => {
   height: 600px; /* 고정된 높이 */
   background-color: #000; /* 검은색 배경 */
   border-radius: 8px; /* 모서리 둥글게 */
-  justify-content: center;
-  align-items: center;
-}
-
-.canvas-text {
-  position: relative;
-  color: #fff; /* 흰색 글씨 */
-  font-size: 3rem; /* 글꼴 크기 */
-  font-family: 'Arial', sans-serif; /* 글꼴 설정 */
-  text-align: center; /* 텍스트 가운데 정렬 */
-  z-index: 10; /* 텍스트가 캔버스 위에 보이도록 설정 */
 }
 
 /* 디졸브 애니메이션 효과 */
@@ -545,7 +532,7 @@ onMounted(() => {
 
 /* NProgress 커스터마이징 */
 #nprogress .bar {
-  height: 8px; /* 프로그레스 바 두께 설정 */
+  height: 10px; /* 프로그레스 바 두께 설정 */
   background: #29d; /* 프로그레스 바 색상 */
 }
 
