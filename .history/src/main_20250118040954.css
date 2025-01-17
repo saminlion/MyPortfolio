@@ -43,10 +43,9 @@
   --button-hover-text: #333333;
   /* 버튼 호버 시 텍스트 색상 */
 
-  --progress-bar-background: #FFD700; 
-  /* 골드 */
-   --progress-bar-shadow: rgba(255, 215, 0, 0.7);
-   /* 약간의 그림자 효과 */
+  --progress-bar-background: #8A2BE2; /* 보라색 */
+  --progress-bar-shadow: rgba(255, 69, 0, 0.7); /* 그림자 효과 */
+  /* 약간의 그림자 효과 */
 }
 
 /* 다크 모드 스타일 */
@@ -96,6 +95,7 @@
 
   --progress-bar-background: #29d;
   /* 프로그래스 바 백그라운드 (밝은 파랑)*/
+
   --progress-bar-shadow: rgba(41, 221, 255, 0.5);
    /* 약간의 그림자 효과 */
 }

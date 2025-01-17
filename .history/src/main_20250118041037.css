@@ -96,6 +96,7 @@
 
   --progress-bar-background: #29d;
   /* 프로그래스 바 백그라운드 (밝은 파랑)*/
+
   --progress-bar-shadow: rgba(41, 221, 255, 0.5);
    /* 약간의 그림자 효과 */
 }

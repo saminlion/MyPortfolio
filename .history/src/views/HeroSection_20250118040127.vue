@@ -188,10 +188,12 @@ watch(isDetailView, (newVal) => {
       triggerDissolveAnimation(); // 디졸브 애니메이션 실행
     }, 3000); // 3초(3000ms) 후 실행
 
-
+          // 상세보기 클릭 후 스크롤을 최상단으로 이동
+          window.scrollTo({
+        top: 0,
+        behavior: "smooth" // 부드러운 스크롤 효과
+      });
   }
-
-
 });
 
 /* 프로젝트 ID 상태 변경 감지 */
@@ -202,12 +204,6 @@ watch(
     console.log(id);
 
     isDetailView.value = id != 0; // ID가 0이 아니면 상세보기 활성화
-
-    // 상세보기 클릭 후 스크롤을 최상단으로 이동
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth" // 부드러운 스크롤 효과
-    });
   }
 );
 
@@ -673,15 +669,14 @@ onMounted(() => {
 
 /* NProgress 커스터마이징 */
 #nprogress .bar {
-  height: 12px;
+  height: 8px;
   /* 프로그레스 바 두께 설정 */
-  background: var(--progress-bar-background) !important;
+  background: #29d;
   /* 프로그레스 바 색상 */
-  box-shadow: 0 0 10px var(--progress-bar-shadow), 0 0 5px var(--progress-bar-shadow);
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px var(--progress-bar-shadow), 0 0 5px var(--progress-bar-shadow);
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
   /* 바 끝부분 효과 */
 }
 

@@ -677,7 +677,6 @@ onMounted(() => {
   /* 프로그레스 바 두께 설정 */
   background: var(--progress-bar-background) !important;
   /* 프로그레스 바 색상 */
-  box-shadow: 0 0 10px var(--progress-bar-shadow), 0 0 5px var(--progress-bar-shadow);
 }
 
 #nprogress .peg {
