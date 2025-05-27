@@ -7,20 +7,17 @@
         "imageUrl": "Image/TheBoy_BG.png",
         "developmentPeriod": "2016.06.20 ~ 2016.07.28",
         "teamSize": "4 planners, 2 programmers",
-        "tools": [
-            "Unity3D",
-            "SQLite3"
-        ],
+        "tools": ["Unity3D", "SQLite3"],
         "description": "A 2.5D puzzle adventure game using water physics",
         "role": "Main role in the project",
         "details": [
-            "Implemented object interactions using the character's jump and abilities",
-            "Simulated large object movements using Distance Joint 2D, vectors, and sleep",
-            "Stored checkpoints and puzzle progress using SQLite",
-            "Saved in-game data with PlayerPrefs",
-            "Implemented water effects using Buoyancy Effect 2D"
+          "Implemented object interactions using the character's jump and abilities",
+          "Simulated large object movements using Distance Joint 2D, vectors, and sleep",
+          "Stored checkpoints and puzzle progress using SQLite",
+          "Saved in-game data with PlayerPrefs",
+          "Implemented water effects using Buoyancy Effect 2D"
         ],
-        "outcomes": [
+        "outcomes":[
             "Successfully published the project on the Google Play Store, demonstrating its distribution potential",
             "Received positive feedback from fellow students and professors at the educational institution, recognizing its quality and completion"
         ]
@@ -33,19 +30,17 @@
         "imageUrl": "Image/Shroud_Title.png",
         "developmentPeriod": "2015.08.01 ~ 2016.12.01",
         "teamSize": "3 planners, 1 programmer",
-        "tools": [
-            "Unity3D"
-        ],
+        "tools": ["Unity3D"],
         "description": "A first-person 3D stealth game where players use three different monsters' abilities to escape",
         "role": "Main role in the project",
         "details": [
-            "Developed enemy AI using Unity's navigation system",
-            "Added AI for three unique enemies and implemented interactions through method calls",
-            "Designed adjustable camera effects using animation curves",
-            "Integrated Wwise SDK for immersive sound and streamlined collaboration with sound designers",
-            "Optimized particle effects using Popcorn FX"
+          "Developed enemy AI using Unity's navigation system",
+          "Added AI for three unique enemies and implemented interactions through method calls",
+          "Designed adjustable camera effects using animation curves",
+          "Integrated Wwise SDK for immersive sound and streamlined collaboration with sound designers",
+          "Optimized particle effects using Popcorn FX"
         ],
-        "outcomes": [
+        "outcomes":[
             "Received positive feedback from gaming industry professionals immediately after presenting the graduation project",
             "Gained favorable responses from students and faculty, earning recognition for the project's quality and completion"
         ]
@@ -58,18 +53,16 @@
         "imageUrl": "Image/IronShadow_BG.jpg",
         "developmentPeriod": "2015.04.01 ~ 2016.06.01",
         "teamSize": "3 planners, 1 programmer",
-        "tools": [
-            "Unity3D"
-        ],
+        "tools": ["Unity3D"],
         "description": "A 2D platformer set in a cyberpunk future where the protagonist uses four different weapons to stop machines threatening the world",
         "role": "Main role in the project",
         "details": [
-            "Implemented gravity bullets using real-time layer changes with Vector3.Lerp",
-            "Designed enemies that approach the player for melee attacks and shoot from a distance",
-            "Developed over five interactive objects that respond to ice, electricity, and gravity guns",
-            "Created a boss that changes attack patterns across three phases"
+          "Implemented gravity bullets using real-time layer changes with Vector3.Lerp",
+          "Designed enemies that approach the player for melee attacks and shoot from a distance",
+          "Developed over five interactive objects that respond to ice, electricity, and gravity guns",
+          "Created a boss that changes attack patterns across three phases"
         ],
-        "outcomes": [
+        "outcomes":[
             "Won the 'Best 2D Game' award at a campus-hosted event, officially proving the artistic value of the work"
         ]
     },
@@ -81,18 +74,16 @@
         "imageUrl": "Image/ARSoccer_BG.png",
         "developmentPeriod": "2016.08.29 ~ 2016.09.02",
         "teamSize": "3 programmers",
-        "tools": [
-            "Unity3D"
-        ],
+        "tools": ["Unity3D"],
         "description": "A 2D multiplayer soccer game where players select a character and play 1v1 matches",
         "role": "Main role in the project",
         "details": [
-            "Synchronized character movements using Photon",
-            "Implemented character switching for both players",
-            "Randomized background music upon completion of a track",
-            "Developed controls for 1v1 soccer gameplay"
+          "Synchronized character movements using Photon",
+          "Implemented character switching for both players",
+          "Randomized background music upon completion of a track",
+          "Developed controls for 1v1 soccer gameplay"
         ],
-        "outcomes": []
+        "outcomes":[]
     },
     {
         "id": 1110005,
@@ -102,17 +93,15 @@
         "imageUrl": "Image/ARSubway_Bg.png",
         "developmentPeriod": "2016.09.03 ~ 2016.09.09",
         "teamSize": "2 programmers",
-        "tools": [
-            "Unity3D"
-        ],
+        "tools": ["Unity3D"],
         "description": "A 2D shooting game where players use GPS to travel between subway stations and defend against zombie attacks",
         "role": "Main role in the project",
         "details": [
-            "Developed shooting, reloading, and weapon-switching mechanics with sound effects",
-            "Used LBS to generate station-specific defenses based on GPS coordinates",
-            "Implemented automatic enemy spawning and adjusted enemy count based on station data"
+          "Developed shooting, reloading, and weapon-switching mechanics with sound effects",
+          "Used LBS to generate station-specific defenses based on GPS coordinates",
+          "Implemented automatic enemy spawning and adjusted enemy count based on station data"
         ],
-        "outcomes": []
+        "outcomes":[]
     },
     {
         "id": 1110006,
@@ -122,18 +111,15 @@
         "imageUrl": "Image/Port_GMMiner.mp4_20190305_094221.254.jpg",
         "developmentPeriod": "2017.05.15 ~ 2017.06.30",
         "teamSize": "1 programmer, 1 planner, 1 artist",
-        "tools": [
-            "Unity3D",
-            "HTC Vive"
-        ],
+        "tools": ["Unity3D", "HTC Vive"],
         "description": "A VR job simulation game where the player becomes a miner, drills rocks with a jackhammer, plants dynamite, and proceeds by detonating it.",
         "role": "Main responsibilities in the project",
         "details": [
-            "Developed the overall gameplay",
-            "Adjusted jackhammer operation and dynamite detonation to fit VR interaction using both hands",
-            "Optimized the game for VR devices"
+          "Developed the overall gameplay",
+          "Adjusted jackhammer operation and dynamite detonation to fit VR interaction using both hands",
+          "Optimized the game for VR devices"
         ],
-        "outcomes": [
+        "outcomes":[
             "Installed VR experience content at Gwangmyeong Cave, providing visitors with a new immersive experience",
             "Contributed to extending visitor stay and enhancing satisfaction through VR experiences",
             "Established as a unique regional tourism attraction by utilizing VR technology",
@@ -148,20 +134,17 @@
         "imageUrl": "Image/Port_Attraction Enginner.mp4_20190305_094804.200.jpg",
         "developmentPeriod": "2018.02.20 ~ 2018.04.30",
         "teamSize": "2 programmers, 1 planner, 2 artists",
-        "tools": [
-            "Unity3D",
-            "Samsung Odyssey"
-        ],
+        "tools": ["Unity3D", "Samsung Odyssey"],
         "description": "A VR job simulation game where the player becomes a maintenance engineer for Everland's T-Express roller coaster, identifying and fixing track issues.",
         "role": "Main responsibilities in the project",
         "details": [
-            "Served as the lead programmer, managing the overall development",
-            "Developed tools for players to use during gameplay",
-            "Conducted R&D and integration with Samsung Odyssey",
-            "Developed the final drop section and effects such as tool animations",
-            "Optimized the game for VR devices"
+          "Served as the lead programmer, managing the overall development",
+          "Developed tools for players to use during gameplay",
+          "Conducted R&D and integration with Samsung Odyssey",
+          "Developed the final drop section and effects such as tool animations",
+          "Optimized the game for VR devices"
         ],
-        "outcomes": [
+        "outcomes":[
             "Operated a VR job experience program for students at a Korean amusement park, providing educational content",
             "Simulated potentially dangerous real-life scenarios in a virtual environment to effectively deliver safety education"
         ]
@@ -174,18 +157,15 @@
         "imageUrl": "Image/Port_SnowScreen.mp4_20190305_095327.808.jpg",
         "developmentPeriod": "2018.01.03 ~ 2018.02.17",
         "teamSize": "2 programmers, 1 planner, 2 artists",
-        "tools": [
-            "Unity3D",
-            "360 Laser Sensor"
-        ],
+        "tools": ["Unity3D", "360 Laser Sensor"],
         "description": "A game designed for children where players use a sensor attached to a wall to throw balls at approaching monsters and save their village.",
         "role": "Main responsibilities in the project",
         "details": [
-            "Developed sensor integration and hit detection mechanics",
-            "Created and managed monster generation and processing",
-            "Designed and implemented scene transition UI and general UI elements"
+          "Developed sensor integration and hit detection mechanics",
+          "Created and managed monster generation and processing",
+          "Designed and implemented scene transition UI and general UI elements"
         ],
-        "outcomes": [
+        "outcomes":[
             "Provided immersive content for children at the festival, achieving high participation and satisfaction rates",
             "Vividly recreated igloos and a winter theme, offering a safe and enjoyable experience for kids",
             "Received widespread praise from visitors and festival organizers for its creative and educational content"
@@ -210,7 +190,7 @@
             "Development of monster generation and handling",
             "UI development, including scene transitions and general UI design"
         ],
-        "outcomes": [
+        "outcomes":[
             "Provided immersive content for children at the festival, achieving high participation and satisfaction rates",
             "Received widespread praise from visitors and festival organizers for its creative and educational content"
         ]
@@ -235,7 +215,7 @@
             "Background changes in sync with the music",
             "Interactive system using a microphone to encourage avatar cheers"
         ],
-        "outcomes": []
+        "outcomes":[]
     },
     {
         "id": 1110011,
@@ -256,7 +236,7 @@
             "Modifications to rail assets for functionality",
             "Animation control and tool development for specific actions"
         ],
-        "outcomes": [
+        "outcomes":[
             "Showcased innovative and immersive VR content at VR Park Tokyo and VR Expo Japan",
             "Earned significant recognition for the quality and creativity of the content from participants and organizers"
         ]
@@ -280,7 +260,7 @@
             "Development for elevator movement",
             "Animation control and tool development for specific actions"
         ],
-        "outcomes": [
+        "outcomes":[
             "Showcased innovative and immersive VR content at VR Park Tokyo and VR Expo Japan",
             "Earned significant recognition for the quality and creativity of the content from participants and organizers"
         ]
@@ -302,7 +282,7 @@
             "Development for loading and applying photos from folders onto animals",
             "Animal animation application and adjustments"
         ],
-        "outcomes": []
+        "outcomes":[]
     },
     {
         "id": 1110014,
@@ -324,8 +304,8 @@
             "Multiplayer integration using Photon",
             "Stage transition implementation"
         ],
-        "outcomes": [
-            "Achieved high participation rates by installing at the Aloha Peace Pavilion"
+        "outcomes":[
+        "Achieved high participation rates by installing at the Aloha Peace Pavilion"
         ]
     },
     {
@@ -346,7 +326,7 @@
             "Adaptation of external glove protocols for Unity3D compatibility",
             "Implementation of steering wheel controls for spline-based vehicle movement"
         ],
-        "outcomes": [
+        "outcomes":[
             "Successfully accomplished a national project through collaboration with external companies"
         ]
     },
@@ -368,9 +348,9 @@
             "Data table creation for English and Korean subtitles and dubbing",
             "Fixing bugs and issues in the existing game system"
         ],
-        "outcomes": [
+        "outcomes":[
             "Resolved 90% of major bugs and improved user accessibility through localization, leading to an increase in global players",
-            "Integrated English/Korean subtitles and dubbing data, improving maintenance efficiency by approximately 30%"
+            "Integrated English/Korean subtitles and dubbing data, improving maintenance efficiency by approximately 30%"            
         ]
     },
     {
@@ -392,9 +372,9 @@
             "Version control to maintain up-to-date content through downloads and uploads",
             "Implementation of ad playback when games are not in use"
         ],
-        "outcomes": [
+        "outcomes":[
             "Secured content stability by resolving over 90% of major bugs and significantly enhanced content management efficiency within stores through platformization",
-            "Successfully executed a collaborative project with other companies using new Meta Quest 2 devices, strengthening VR device compatibility"
+"Successfully executed a collaborative project with other companies using new Meta Quest 2 devices, strengthening VR device compatibility"
         ]
     },
     {
@@ -416,7 +396,7 @@
             "Dinosaur AI and animation looping",
             "Implementation of systems to add variety across stages"
         ],
-        "outcomes": [
+        "outcomes":[
             "Established as an interactive experience content at the Yangju Sports Welfare Center, allowing children to interact with and enjoy dinosaurs",
             "Provided an educational and entertaining user experience through AI-driven dinosaur interactions and laser sensor-based interactive content",
             "Enhanced visitor satisfaction at the welfare center with sensor-based experiential content, contributing to local community activities"
@@ -439,7 +419,7 @@
         "details": [
             "Base system work for the Punch Pang content"
         ],
-        "outcomes": [
+        "outcomes":[
             "Positioned as an interactive experience content at the Yangju Sports Welfare Center, encouraging children to exercise and interact while having fun"
         ]
     },
@@ -462,7 +442,7 @@
             "Sending captured microorganisms to a networked PC with projectors for synchronized effects and animations",
             "Video editing and synchronization across multiple PCs for consistent playback"
         ],
-        "outcomes": [
+        "outcomes":[
             "Installed at the Sunchang Food Science Center, providing children with engaging content that sparks interest in terraforming and microbial ecosystems while experiencing scientific concepts",
             "Delivered synchronized content across multiple displays with stable performance through a sensor-based interactive system and network integration",
             "Built an interactive system where player actions are reflected in real time, significantly improving visitor immersion and satisfaction",
@@ -487,7 +467,7 @@
             "Development of interactive UI integration",
             "Ensuring compatibility across mobile and PC resolutions"
         ],
-        "outcomes": [
+        "outcomes":[
             "Improved the existing UI system to provide an optimized environment where operators can efficiently manage and apply UI elements",
             "Enhanced system stability and user convenience by ensuring UI compatibility across various resolutions and platforms",
             "Increased accessibility and usability of content through user experience-focused UI/UX improvements"
@@ -510,7 +490,7 @@
             "Development of UI and base systems for over six types of exercise content",
             "Implementation of consistent and easy-to-maintain gameplay mechanics for all exercise types"
         ],
-        "outcomes": [
+        "outcomes":[
             "Developed user-centered content to make diverse sports content more enjoyable and accessible for students",
             "Built an environment that simplifies maintenance and allows for easy expansion of additional content through a unified system structure",
             "Increased the immersion of sports content and enhanced user engagement, boosting the efficiency of education and exercise"
@@ -535,7 +515,7 @@
             "Implementation of a results system to identify successful and failed operations",
             "Pressure system calculations to verify proper equipment installation"
         ],
-        "outcomes": [
+        "outcomes":[
             "Provided experiential learning content that allows university students to simulate and learn complex fire equipment processes in a VR environment",
             "Improved problem-solving skills and practical understanding of students through an equipment operation and installation verification system",
             "Demonstrated a new direction for safety education content by leveraging virtual environments for practical training, proving tangible educational effectiveness",
@@ -560,41 +540,31 @@
             "Implementation of YouTube playback and external video streaming in VR Chat",
             "Development of features allowing administrators to trigger events like fireworks in VR Chat"
         ],
-        "outcomes": [
+        "outcomes":[
             "Provided an environment supporting up to 40 simultaneous users, enabling them to present and share their projects in a metaverse lecture hall",
             "Successfully hosted three diverse conference lectures, demonstrating the effectiveness of VR Chat-based lecture halls",
             "Contributed to education and presentation activities by facilitating the use of VR-based lecture halls by both international and domestic organizations"
         ]
     },
     {
-        "id": 1110025,
-        "name": "LiveVtuber (Unity)",
-        "downloadLink": "",
-        "demoVideo": "https://youtu.be/-pb2VaZuflg",
-        "imageUrl": "Image/LiveVtuber_Unity.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "1 Programmer",
-        "tools": [
-            "Unity",
-            "Live2D",
-            "FaceCap",
-            "WebSocket"
-        ],
-        "description": "A real-time broadcasting system that applies face tracking data from the iPhone FaceCap app to a Live2D character in Unity via a WebSocket server.",
-        "role": "Sole developer: designed and implemented the entire pipeline",
-        "details": [
-            "Implemented OSC → WebSocket → Unity face tracking pipeline",
-            "Live2D character facial expression updates in real-time using only an iPhone",
-            "Implemented TTS-based automatic lip sync (Korean/Japanese)",
-            "Built gesture trigger system and broadcasting UI mode"
-        ],
-        "outcomes": [
-            "Built a Unity-based VTuber system controllable with just one iPhone",
-            "Achieved smooth and responsive face expression with advanced filtering",
-            "Demonstrated real-time face tracking + gesture + TTS lip sync in a complete prototype",
-            "Independently implemented the entire pipeline from FaceCap to Live2D with service scalability in mind"
-        ]
-    },
+                "id": 1110025,
+
+  "name": "LiveVtuber (Unity)",
+  "description": "A real-time broadcasting system that applies face tracking data from the iPhone FaceCap app to a Live2D character in Unity via a WebSocket server.",
+  "role": "Sole developer: designed and implemented the entire pipeline",
+  "details": [
+    "Implemented OSC → WebSocket → Unity face tracking pipeline",
+    "Live2D character facial expression updates in real-time using only an iPhone",
+    "Implemented TTS-based automatic lip sync (Korean/Japanese)",
+    "Built gesture trigger system and broadcasting UI mode"
+  ],
+  "outcomes": [
+    "Built a Unity-based VTuber system controllable with just one iPhone",
+    "Achieved smooth and responsive face expression with advanced filtering",
+    "Demonstrated real-time face tracking + gesture + TTS lip sync in a complete prototype",
+    "Independently implemented the entire pipeline from FaceCap to Live2D with service scalability in mind"
+  ]
+},
     {
         "id": 1120001,
         "name": "The Truth",
@@ -613,7 +583,7 @@
             "Developed AI patterns for enemies and bosses",
             "Created cinematic videos using Matinee"
         ],
-        "outcomes": []
+        "outcomes":[]
     },
     {
         "id": 1120002,
@@ -644,7 +614,7 @@
             "Added waiting effects until players connect",
             "Developed travel system for server and client to move to the next map"
         ],
-        "outcomes": [
+        "outcomes":[
             "Successfully developed and installed competitive interactive content for visitors at Lotte World",
             "Provided an engaging experience where visitors could compete with each other, becoming a new source of fun at the amusement park"
         ]
@@ -668,7 +638,7 @@
             "Adjusted and modified specific content",
             "Provided support for final installation and operations"
         ],
-        "outcomes": [
+        "outcomes":[
             "Successfully installed mini VR content integrated with six different simulators at Tongjeyeong",
             "Positioned as content that allows users to experience the training and life of Admiral Yi Sun-sin during the Joseon Dynasty",
             "As the project manager, improved content quality while meeting deadlines",
@@ -703,11 +673,11 @@
             "Ensured functionality on Android phones, tablets, and iPads",
             "Optimized UI for various devices"
         ],
-        "outcomes": [
-            "Built a metaverse fashion platform that supports up to 10 simultaneous users, allowing them to invite guests to their virtual stores and interact",
-            "Successfully completed a national project verifying the business potential of individual metaverse fashion ventures",
-            "Secured compatibility across various platforms (Android, iOS) and devices, supporting a wide user base",
-            "Provided an environment conducive to maintenance and additional feature development through optimized and data-driven UI design of the existing system"
+        "outcomes":[
+           "Built a metaverse fashion platform that supports up to 10 simultaneous users, allowing them to invite guests to their virtual stores and interact",
+           "Successfully completed a national project verifying the business potential of individual metaverse fashion ventures",
+           "Secured compatibility across various platforms (Android, iOS) and devices, supporting a wide user base",
+           "Provided an environment conducive to maintenance and additional feature development through optimized and data-driven UI design of the existing system"
         ]
     },
     {
@@ -719,8 +689,7 @@
         "developmentPeriod": "2022.05.13 ~ 2022.08.31",
         "teamSize": "2 Programmers, 3 Artists, 2 Planners",
         "tools": [
-            "Unreal Engine 4",
-            "NDI"
+            "Unreal Engine 4", "NDI"
         ],
         "description": "A content experience for all ages using a mobile large vehicle, a projector, and laser sensors to find objects or items like campfire wood through touch interactions.",
         "role": "Primary role in this project",
@@ -730,7 +699,7 @@
             "Supported ride content programs and implemented systems like Planar VR",
             "Developed a system to toggle projects and content on and off using tablets"
         ],
-        "outcomes": [
+        "outcomes":[
             "Introduced an NDI-based four-sided display system in a mobile vehicle, delivering highly immersive content",
             "Built a system that allows content to be experienced while traveling to schools and various locations, securing a wide user base",
             "Combined touch sensor-based interaction with multi-display technology to offer a differentiated user experience",
@@ -759,7 +728,7 @@
             "Designed a data table for enemies and events to simplify balancing tests for planners",
             "Developed a system to record and synchronize each player's scores"
         ],
-        "outcomes": [
+        "outcomes":[
             "Successfully installed VR FPS content at the Gyeryong Military Experience Center, providing immersive experiences for adult visitors",
             "Built an interactive system that reflects players’ actions in real time, significantly enhancing visitor satisfaction",
             "Established as the center’s flagship experiential content, contributing to expanding education and experiential opportunities in the local community"
@@ -785,41 +754,30 @@
             "Improved existing systems for the air force and implemented enemy fighter jet appearances and targeting systems",
             "Modified flight paths to enhance the realism of the flying experience"
         ],
-        "outcomes": [
+        "outcomes":[
             "Successfully installed VR simulator content at the Gyeryong Military Experience Center, offering immersive experiences for both adults and children",
             "Improved visitor satisfaction significantly with an interactive system that reflects players’ actions in real time",
             "Positioned as the center’s signature experiential content, contributing to the expansion of education and experiential opportunities in the local community"
         ]
     },
     {
-        "id": 1120008,
-        "name": "LiveVtuber (Unreal)",
-        "downloadLink": "",
-        "demoVideo": "https://youtu.be/iHsidrgpN9M",
-        "imageUrl": "Image/LiveVtuber_Unreal.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "1 Programmer",
-        "tools": [
-            "Unreal Engine 5",
-            "LiveLink",
-            "WebSocket",
-            "VRM"
-        ],
-        "description": "A high-quality VTuber system in Unreal Engine using WebSocket and LiveLink to support real-time face tracking, TTS-based lip sync, and animated stage performance.",
-        "role": "Sole developer: designed and implemented the full system and visual direction",
-        "details": [
-            "Integrated FaceCap data via WebSocket and applied it to characters using LiveLink",
-            "Implemented TTS-based lip sync (Korean/Japanese)",
-            "Created dance sequences and cinematic camera work using Sequencer",
-            "Supported MetaHuman and VRM characters with real-time material control"
-        ],
-        "outcomes": [
-            "Built a high-fidelity VTuber broadcasting system in Unreal Engine",
-            "Combined real-time character control with automated lip sync and cinematic sequences",
-            "Scalable system via WebSocket supporting multi-user expansion",
-            "Independently implemented the entire system from face tracking to stage production"
-        ]
-    },
+         "id": 1120008,
+ "name": "LiveVtuber (Unreal)",
+  "description": "A high-quality VTuber system in Unreal Engine using WebSocket and LiveLink to support real-time face tracking, TTS-based lip sync, and animated stage performance.",
+  "role": "Sole developer: designed and implemented the full system and visual direction",
+  "details": [
+    "Integrated FaceCap data via WebSocket and applied it to characters using LiveLink",
+    "Implemented TTS-based lip sync (Korean/Japanese)",
+    "Created dance sequences and cinematic camera work using Sequencer",
+    "Supported MetaHuman and VRM characters with real-time material control"
+  ],
+  "outcomes": [
+    "Built a high-fidelity VTuber broadcasting system in Unreal Engine",
+    "Combined real-time character control with automated lip sync and cinematic sequences",
+    "Scalable system via WebSocket supporting multi-user expansion",
+    "Independently implemented the entire system from face tracking to stage production"
+  ]
+},
     {
         "id": 1130001,
         "name": "Road of Pilgrim",
@@ -843,7 +801,7 @@
             "Configured masks to prevent enemies' attacks from hitting each other while allowing the player's attacks to neutralize enemy attacks",
             "Used scheduling to dynamically generate and remove particles and bodies within the game"
         ],
-        "outcomes": []
+        "outcomes":[]
     },
     {
         "id": 1130002,
@@ -865,7 +823,7 @@
             "Developed routines for game execution and closure",
             "Added functionality to play advertisement videos after game closure if available"
         ],
-        "outcomes": [
+        "outcomes":[
             "Improved system stability significantly by resolving 90% of major bugs",
             "Increased store operation convenience by enabling the management of diverse content on a single platform",
             "Enhanced monetization potential through automatic playback of advertisement videos"
@@ -889,7 +847,7 @@
             "Developed Bluetooth communication between the electromyography device and PC",
             "Displayed electromyography EMS formulas graphically on PC"
         ],
-        "outcomes": [
+        "outcomes":[
             "Developed and successfully delivered a product for external companies",
             "Designed to ensure ease of use for external companies, receiving high usability evaluations",
             "Received positive feedback from external companies for its convenient usability"
@@ -914,39 +872,10 @@
             "Developed an advertisement playback feature within the PC launcher",
             "Created routines for game execution and closure"
         ],
-        "outcomes": [
-            "Improved system stability significantly by resolving 90% of major bugs",
-            "Increased store operation convenience by enabling the management of diverse content on a single platform",
-            "Enhanced monetization potential through automatic playback of advertisement videos"
-        ]
-    },
-    {
-        "id": 130005,
-        "name": "LiveVtuber WebServer",
-        "downloadLink": "",
-        "demoVideo": "",
-        "imageUrl": "Image/LiveVtuber_WebServer.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "1 Programmer",
-        "tools": [
-            "Node.js",
-            "WebSocket",
-            "Express",
-            "Google TTS"
-        ],
-        "description": "A relay server that converts FaceCap OSC data into WebSocket messages and generates TTS audio with corresponding lip sync data for Unity and Unreal clients.",
-        "role": "Sole developer: designed and implemented the entire server architecture",
-        "details": [
-            "Receives OSC data from FaceCap and broadcasts via WebSocket",
-            "Generates TTS audio and corresponding JSON-based lip sync data",
-            "Supports multiple users by mapping each userId to a character",
-            "Hosts TTS audio and JSON files using an Express static server"
-        ],
-        "outcomes": [
-            "Built a unified WebSocket server compatible with both Unity and Unreal",
-            "Implemented TTS-based real-time lip sync pipeline",
-            "Designed for extensibility with user-based routing and content management",
-            "Completed end-to-end implementation from OSC input to data delivery to clients"
+        "outcomes":[
+           "Improved system stability significantly by resolving 90% of major bugs",
+           "Increased store operation convenience by enabling the management of diverse content on a single platform",
+           "Enhanced monetization potential through automatic playback of advertisement videos"
         ]
     }
 ]

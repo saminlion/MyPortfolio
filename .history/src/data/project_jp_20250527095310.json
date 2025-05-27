@@ -793,7 +793,7 @@
     {
         "id": 8120008,
         "name": "LiveVtuber（Unreal）",
-        "downloadLink": "",
+                "downloadLink": "",
         "demoVideo": "https://youtu.be/iHsidrgpN9M",
         "imageUrl": "Image/LiveVtuber_Unreal.jpg",
         "developmentPeriod": "2025.05.18 ~ 2025.05.27",
@@ -922,17 +922,6 @@
     {
         "id": 8130005,
         "name": "LiveVtuber WebServer",
-        "downloadLink": "",
-        "demoVideo": "",
-        "imageUrl": "Image/LiveVtuber_WebServer.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "プログラマー1名",
-        "tools": [
-            "Node.js",
-            "WebSocket",
-            "Express",
-            "Google TTS"
-        ],
         "description": "FaceCapのOSCデータをWebSocket経由でUnity・Unrealクライアントに配信し、TTS音声およびリップシンク用JSONデータを生成する中継サーバー。",
         "role": "サーバー全体の構築・設計・実装を単独で担当",
         "details": [

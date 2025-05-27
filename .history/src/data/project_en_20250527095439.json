@@ -569,17 +569,6 @@
     {
         "id": 1110025,
         "name": "LiveVtuber (Unity)",
-        "downloadLink": "",
-        "demoVideo": "https://youtu.be/-pb2VaZuflg",
-        "imageUrl": "Image/LiveVtuber_Unity.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "1 Programmer",
-        "tools": [
-            "Unity",
-            "Live2D",
-            "FaceCap",
-            "WebSocket"
-        ],
         "description": "A real-time broadcasting system that applies face tracking data from the iPhone FaceCap app to a Live2D character in Unity via a WebSocket server.",
         "role": "Sole developer: designed and implemented the entire pipeline",
         "details": [
@@ -794,17 +783,6 @@
     {
         "id": 1120008,
         "name": "LiveVtuber (Unreal)",
-        "downloadLink": "",
-        "demoVideo": "https://youtu.be/iHsidrgpN9M",
-        "imageUrl": "Image/LiveVtuber_Unreal.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "1 Programmer",
-        "tools": [
-            "Unreal Engine 5",
-            "LiveLink",
-            "WebSocket",
-            "VRM"
-        ],
         "description": "A high-quality VTuber system in Unreal Engine using WebSocket and LiveLink to support real-time face tracking, TTS-based lip sync, and animated stage performance.",
         "role": "Sole developer: designed and implemented the full system and visual direction",
         "details": [
@@ -923,7 +901,7 @@
     {
         "id": 130005,
         "name": "LiveVtuber WebServer",
-        "downloadLink": "",
+                "downloadLink": "",
         "demoVideo": "",
         "imageUrl": "Image/LiveVtuber_WebServer.jpg",
         "developmentPeriod": "2025.05.18 ~ 2025.05.27",

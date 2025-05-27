@@ -568,17 +568,6 @@
     {
         "id": 8110025,
         "name": "LiveVtuber（Unity）",
-        "downloadLink": "",
-        "demoVideo": "https://youtu.be/-pb2VaZuflg",
-        "imageUrl": "Image/LiveVtuber_Unity.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "プログラマー1名",
-        "tools": [
-            "Unity",
-            "Live2D",
-            "FaceCap",
-            "WebSocket"
-        ],
         "description": "iPhoneのFaceCapアプリで取得した顔トラッキングデータをWebSocketサーバーを通じてUnityのLive2Dキャラクターにリアルタイムで反映する配信システム。",
         "role": "全体設計および開発を一人で担当",
         "details": [
@@ -793,17 +782,6 @@
     {
         "id": 8120008,
         "name": "LiveVtuber（Unreal）",
-        "downloadLink": "",
-        "demoVideo": "https://youtu.be/iHsidrgpN9M",
-        "imageUrl": "Image/LiveVtuber_Unreal.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "プログラマー1名",
-        "tools": [
-            "Unreal Engine 5",
-            "LiveLink",
-            "WebSocket",
-            "VRM"
-        ],
         "description": "Unreal Engineを用いて、WebSocketとLiveLinkで顔トラッキング、TTSリップシンク、カメラ演出付きダンスパフォーマンスを実現した高品質VTuber配信システム。",
         "role": "全システムの設計・演出・実装を一人で担当",
         "details": [
@@ -922,17 +900,6 @@
     {
         "id": 8130005,
         "name": "LiveVtuber WebServer",
-        "downloadLink": "",
-        "demoVideo": "",
-        "imageUrl": "Image/LiveVtuber_WebServer.jpg",
-        "developmentPeriod": "2025.05.18 ~ 2025.05.27",
-        "teamSize": "プログラマー1名",
-        "tools": [
-            "Node.js",
-            "WebSocket",
-            "Express",
-            "Google TTS"
-        ],
         "description": "FaceCapのOSCデータをWebSocket経由でUnity・Unrealクライアントに配信し、TTS音声およびリップシンク用JSONデータを生成する中継サーバー。",
         "role": "サーバー全体の構築・設計・実装を単独で担当",
         "details": [
