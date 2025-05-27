@@ -570,7 +570,7 @@
         "name": "LiveVtuber (Unity)",
         "downloadLink": "",
         "demoVideo": "https://youtu.be/-pb2VaZuflg",
-        "imageUrl": "Image/LiveVtuber_Unity.png",
+        "imageUrl": "Image/LiveVtuber_Unity.jpg",
         "developmentPeriod": "2025.05.18 ~ 2025.05.27",
         "teamSize": "1명",
         "tools": [
@@ -920,7 +920,7 @@
         "name": "LiveVtuber WebServer",
         "downloadLink": "",
         "demoVideo": "",
-        "imageUrl": "Image/LiveVtuber_WebServer.png",
+        "imageUrl": "Image/LiveVtuber_WebServer.jpg",
         "developmentPeriod": "2025.05.18 ~ 2025.05.27",
         "teamSize": "1명",
         "tools": [
